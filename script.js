@@ -4,3 +4,4 @@ function exibirValor() {
     const valorSelecionado = select.value;
     alert("O valor selecionado é: " + valorSelecionado);
 }
+if( )
