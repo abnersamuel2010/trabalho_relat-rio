@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassicCine</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
     <script src="script.js"></script>
+</head>
+
+<body>
+    <img class="logotipo" src="img/logotipo.jpg" alt="logotipo">
     <header>
-        
+
+        Selecione sua categoria!
+        <br>
 
     </header>
     <main>
 
+        <label for="filme"></label>
 
+            <select name="filme" id="filme">
+
+                <option value="">SELECIONE</option>
+                <option value="filmeT">Terror</option>
+                <option value="filmeD">Drama</option>
+                <option value="filmeC">Comédia</option>
+                <option value="filmeR">Romance</option>
+                <option value="filmeA">Ação</option>
+
+        </select>
 
     </main>
     <footer>
@@ -23,4 +39,5 @@
 
     </footer>
 </body>
+
 </html>
