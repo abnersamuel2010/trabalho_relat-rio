@@ -1,7 +1,11 @@
-.logosemfundo{
+.logotexto{
     width: 240px;
 }
 header{
-    background-color: rgb(60, 47, 75);
+    background-color: white;
     height: 200px;
+}
+main{
+    background-color: darkgray;
+    height: 1000px;
 }
