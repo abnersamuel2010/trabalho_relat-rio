@@ -16,6 +16,7 @@
 
     </header>
     <main>
+        
         Selecione sua categoria!
         <br>
 
@@ -32,7 +33,31 @@
             <option value="filmeA">Ação</option>
 
         </select><br>
+
+        <label>Terror:
+            <select name="Terror" id="terror"></select>
+        </label><br>
+
+        <label>Aventura:
+            <select name="Aventura" id="aventura"></select>
+        </label><br>
+
+        <label>Romance:
+            <select name="Romance" id="romance"></select>
+        </label><br>
+
+        <label>Comedia:
+            <select name="Comedia" id="comedia"></select>
+        </label><br>
+
+        <label>Drama:
+            <select name="Drama" id="drama"></select>
+        </label><br>
+
+        <button type="button" onclick="gerarRelatorio()" >Gerar Relatorio</button>
+
         <button onclick="exibirValor()">Exibir Valor</button>
+        <p id="valorSelecionado " ></p>
     </main>
     <footer>
 
