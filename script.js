@@ -1,7 +1,7 @@
 function exibirValor() {
     const select = document.getElementById("filme");
-    const valorSelecionado = select.value;
-    document.getElementById('categoria').textContent = 'Categoria: ' + valorSelecionado;
+    const categoria = select.value;
+    document.getElementById('categoria').textContent = 'Categoria: ' + categoria;
 }
 const terror = [
     { id: "tr", nome: "Terrifier", preço: 25 },
@@ -32,3 +32,4 @@ const drama = [
     { id: "st", nome: "Show de truman", preço: 25 },
     { id: "it", nome: "Interstelar", preço: 25 },
 ]
+
