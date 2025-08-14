@@ -1,11 +1,10 @@
 .logotexto{
-    width: 240px;
+    width: 100px;
 }
 header{
-    background-color: white;
-    height: 200px;
+    height: 150px;
+    background-color: rgb(122, 0, 0);
 }
 main{
-    background-color: darkgray;
     height: 1000px;
 }

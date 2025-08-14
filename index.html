@@ -12,20 +12,18 @@
 <body>
 
     <header>
-        <img class="logotexto" src="img/logotexto.jpg" alt="logotexto">
-
+        <img class="logotexto" src="img/logotipo1.png" alt="logotexto">
+        
     </header>
     <main>
-        
-        Selecione sua categoria!
-        <br>
+        <h1>Selecione sua categoria!</h1>
 
         <label for="filme"></label>
 
         <select name="filme" id="filme">
 
             <option value="Nenhum">SELECIONE</option>
-            <option value="Terror">Terror</option> 
+            <option value="Terror">Terror</option>
             <option value="Aventura">Aventura</option>
             <option value="Romance">Romance</option>
             <option value="Comédia">Comédia</option>
@@ -33,31 +31,52 @@
             <option value="Açao">Ação</option>
 
         </select><br>
-
+        <br>
         <label>Terror:
             <select name="Terror" id="terror"></select>
         </label><br>
-
+        <br>
         <label>Aventura:
             <select name="Aventura" id="aventura"></select>
         </label><br>
-
+        <br>
         <label>Romance:
             <select name="Romance" id="romance"></select>
         </label><br>
-
+        <br>
         <label>Comedia:
             <select name="Comedia" id="comedia"></select>
         </label><br>
-
+        <br>
         <label>Drama:
             <select name="Drama" id="drama"></select>
         </label><br>
-
-        <button type="button" onclick="gerarRelatorio()" >Gerar Relatorio</button>
-
+        <br>
+        <button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button>
+        <br>
         <button onclick="exibirValor()">Exibir Valor</button>
-        <p id="valorSelecionado " ></p>
+        <p id="categoria"></p>
+
+        <label for="">Escolha seu lugares:</label> <br>
+            <input type="checkbox" name="lugar0" id="assento0" value="A1">
+            <label for="A1">A1</label>
+            <input type="checkbox" name="lugar1" id="assento1" value="A2">
+            <label for="A2">A2</label>
+            <input type="checkbox" name="lugar2" id="assento2" value="A3">
+            <label for="A3">A3</label>
+            <input type="checkbox" name="lugar3" id="assento3" value="A4">
+            <label for="A4">A4</label>
+            <input type="checkbox" name="lugar4" id="assento4" value="A5">
+            <label for="A5">A5</label>
+            <input type="checkbox" name="lugar5" id="assento5" value="A6">
+            <label for="A6">A6</label>
+            <input type="checkbox" name="lugar6" id="assento6" value="A7">
+            <label for="A7">A7</label>
+            <input type="checkbox" name="lugar7" id="assento7" value="A8">
+            <label for="A8">A8</label>
+            <input type="checkbox" name="lugar8" id="assento8" value="A9">
+            <label for="A9">A9</label>
+
     </main>
     <footer>
 
