@@ -2,87 +2,215 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassicCine</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassicCine</title>
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <header>
-        <img class="logotexto" src="img/logotipo1.png" alt="logotexto">
-        
-    </header>
-    <main>
-        <h1>Selecione sua categoria!</h1>
+<header>
+<img class="logotexto" src="img/logotipo1.png" alt="logotexto">
 
-        <label for="filme"></label>
+</header>
+<main>
 
-        <select name="filme" id="filme">
+<h1 class="bemv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
 
-            <option value="Nenhum">SELECIONE</option>
-            <option value="Terror">Terror</option>
-            <option value="Aventura">Aventura</option>
-            <option value="Romance">Romance</option>
-            <option value="Comédia">Comédia</option>
-            <option value="Drama">Drama</option>
-            <option value="Açao">Ação</option>
+<h2>Selecione sua categoria!</h2>
 
-        </select><br>
-        <br>
-        <label>Terror:
-            <select name="Terror" id="terror"></select>
-        </label><br>
-        <br>
-        <label>Aventura:
-            <select name="Aventura" id="aventura"></select>
-        </label><br>
-        <br>
-        <label>Romance:
-            <select name="Romance" id="romance"></select>
-        </label><br>
-        <br>
-        <label>Comedia:
-            <select name="Comedia" id="comedia"></select>
-        </label><br>
-        <br>
-        <label>Drama:
-            <select name="Drama" id="drama"></select>
-        </label><br>
-        <br>
-        <button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button>
-        <br>
-        <button onclick="exibirValor()">Exibir Valor</button>
-        <p id="categoria"></p>
+<label>Terror:
+<select id="terror"></select>
+</label><br>
+<br>
+<label>Aventura:
+<select id="aventura"></select>
+</label><br>
+<br>
+<label>Romance:
+<select id="romance"></select>
+</label><br>
+<br>
+<label>Comedia:
+<select id="comedia"></select>
+</label><br>
+<br>
+<label>Drama:
+<select id="drama"></select>
+</label><br>
+<br>
+<label>ação:
+<select id="acao"></select>
+</label><br>
+<br>
 
-        <label for="">Escolha seu lugares:</label> <br>
-            <input type="checkbox" name="lugar0" id="assento0" value="A1">
-            <label for="A1">A1</label>
-            <input type="checkbox" name="lugar1" id="assento1" value="A2">
-            <label for="A2">A2</label>
-            <input type="checkbox" name="lugar2" id="assento2" value="A3">
-            <label for="A3">A3</label>
-            <input type="checkbox" name="lugar3" id="assento3" value="A4">
-            <label for="A4">A4</label>
-            <input type="checkbox" name="lugar4" id="assento4" value="A5">
-            <label for="A5">A5</label>
-            <input type="checkbox" name="lugar5" id="assento5" value="A6">
-            <label for="A6">A6</label>
-            <input type="checkbox" name="lugar6" id="assento6" value="A7">
-            <label for="A7">A7</label>
-            <input type="checkbox" name="lugar7" id="assento7" value="A8">
-            <label for="A8">A8</label>
-            <input type="checkbox" name="lugar8" id="assento8" value="A9">
-            <label for="A9">A9</label>
+<label for="">Escolha seu lugares:</label> <br>
+<input type="checkbox" name="lugar0" id="assentoA1" value="A1">
+<label for="A1"></label>
+<input type="checkbox" name="lugar1" id="assentoA2" value="A2">
+<label for="A2"></label>
+<input type="checkbox" name="lugar2" id="assentoA3" value="A3">
+<label for="A3"></label>
+<input type="checkbox" name="lugar3" id="assentoA4" value="A4">
+<label for="A4"></label>
+<input type="checkbox" name="lugar4" id="assentoA5" value="A5">
+<label for="A5"></label>
+<input type="checkbox" name="lugar5" id="assentoA6" value="A6">
+<label for="A6"></label>
+<input type="checkbox" name="lugar6" id="assentoA7" value="A7">
+<label for="A7"></label>
+<input type="checkbox" name="lugar7" id="assentoA8" value="A8">
+<label for="A8"></label>
+<input type="checkbox" name="lugar8" id="assentoA9" value="A9">
+<label for="A9"></label>A<BR>
 
-    </main>
-    <footer>
+<input type="checkbox" name="lugar0" id="assentoB1" value="B1">
+<label for="B1"></label>
+<input type="checkbox" name="lugar1" id="assentoB2" value="B2">
+<label for="B2"></label>
+<input type="checkbox" name="lugar2" id="assentoB3" value="B3">
+<label for="B3"></label>
+<input type="checkbox" name="lugar3" id="assentoB4" value="B4">
+<label for="B4"></label>
+<input type="checkbox" name="lugar4" id="assentoB5" value="B5">
+<label for="B5"></label>
+<input type="checkbox" name="lugar5" id="assentoB6" value="B6">
+<label for="B6"></label>
+<input type="checkbox" name="lugar6" id="assentoB7" value="B7">
+<label for="B7"></label>
+<input type="checkbox" name="lugar7" id="assentoB8" value="B8">
+<label for="B8"></label>
+<input type="checkbox" name="lugar8" id="assentoB9" value="B9">
+<label for="B9"></label>B<br>
+
+<input type="checkbox" name="lugar0" id="assentoC1" value="C1">
+<label for="C1"></label>
+<input type="checkbox" name="lugar1" id="assentoC2" value="C2">
+<label for="C2"></label>
+<input type="checkbox" name="lugar2" id="assentoC3" value="C3">
+<label for="C3"></label>
+<input type="checkbox" name="lugar3" id="assentoC4" value="C4">
+<label for="C4"></label>
+<input type="checkbox" name="lugar4" id="assentoC5" value="C5">
+<label for="C5"></label>
+<input type="checkbox" name="lugar5" id="assentoC6" value="C6">
+<label for="C6"></label>
+<input type="checkbox" name="lugar6" id="assentoC7" value="C7">
+<label for="C7"></label>
+<input type="checkbox" name="lugar7" id="assentoC8" value="C8">
+<label for="C8"></label>
+<input type="checkbox" name="lugar8" id="assentoC9" value="C9">
+<label for="C9"></label>C<br>
+
+<input type="checkbox" name="lugar0" id="assentoD1" value="D1">
+<label for="D1"></label>
+<input type="checkbox" name="lugar1" id="assentoD2" value="D2">
+<label for="D2"></label>
+<input type="checkbox" name="lugar2" id="assentoD3" value="D3">
+<label for="D3"></label>
+<input type="checkbox" name="lugar3" id="assentoD4" value="D4">
+<label for="D4"></label>
+<input type="checkbox" name="lugar4" id="assentoD5" value="D5">
+<label for="D5"></label>
+<input type="checkbox" name="lugar5" id="assentoD6" value="D6">
+<label for="D6"></label>
+<input type="checkbox" name="lugar6" id="assentoD7" value="D7">
+<label for="D7"></label>
+<input type="checkbox" name="lugar7" id="assentoD8" value="D8">
+<label for="D8"></label>
+<input type="checkbox" name="lugar8" id="assentoD9" value="D9">
+<label for="D9"></label>D<br>
+
+<input type="checkbox" name="lugar0" id="assentoE1" value="E1">
+<label for="E1"></label>
+<input type="checkbox" name="lugar1" id="assentoE2" value="E2">
+<label for="E2"></label>
+<input type="checkbox" name="lugar2" id="assentoE3" value="E3">
+<label for="E3"></label>
+<input type="checkbox" name="lugar3" id="assentoE4" value="E4">
+<label for="E4"></label>
+<input type="checkbox" name="lugar4" id="assentoE5" value="E5">
+<label for="E5"></label>
+<input type="checkbox" name="lugar5" id="assentoE6" value="E6">
+<label for="E6"></label>
+<input type="checkbox" name="lugar6" id="assentoE7" value="E7">
+<label for="E7"></label>
+<input type="checkbox" name="lugar7" id="assentoE8" value="E8">
+<label for="E8"></label>
+<input type="checkbox" name="lugar8" id="assentoE9" value="E9">
+<label for="E9"></label>E<br>
+
+<input type="checkbox" name="lugar0" id="assentoF1" value="F1">
+<label for="F1"></label>
+<input type="checkbox" name="lugar1" id="assentoF2" value="F2">
+<label for="F2"></label>
+<input type="checkbox" name="lugar2" id="assentoF3" value="F3">
+<label for="F3"></label>
+<input type="checkbox" name="lugar3" id="assentoF4" value="F4">
+<label for="F4"></label>
+<input type="checkbox" name="lugar4" id="assentoF5" value="F5">
+<label for="F5"></label>
+<input type="checkbox" name="lugar5" id="assentoF6" value="F6">
+<label for="F6"></label>
+<input type="checkbox" name="lugar6" id="assentoF7" value="F7">
+<label for="F7"></label>
+<input type="checkbox" name="lugar7" id="assentoF8" value="F8">
+<label for="F8"></label>
+<input type="checkbox" name="lugar8" id="assentoF9" value="F9">
+<label for="F9"></label>F<br>
+
+<input type="checkbox" name="lugar0" id="assentoG1" value="G1">
+<label for="G1"></label>
+<input type="checkbox" name="lugar1" id="assentoG2" value="G2">
+<label for="G2"></label>
+<input type="checkbox" name="lugar2" id="assentoG3" value="G3">
+<label for="G3"></label>
+<input type="checkbox" name="lugar3" id="assentoG4" value="G4">
+<label for="G4"></label>
+<input type="checkbox" name="lugar4" id="assentoG5" value="G5">
+<label for="G5"></label>
+<input type="checkbox" name="lugar5" id="assentoG6" value="G6">
+<label for="G6"></label>
+<input type="checkbox" name="lugar6" id="assentoG7" value="G7">
+<label for="G7"></label>
+<input type="checkbox" name="lugar7" id="assentoG8" value="G8">
+<label for="G8"></label>
+<input type="checkbox" name="lugar8" id="assentoG9" value="G9">
+<label for="G9"></label>G<br>
+
+<input type="checkbox" name="lugar0" id="assentoH1" value="H1">
+<label for="H1"></label>
+<input type="checkbox" name="lugar1" id="assentoH2" value="H2">
+<label for="H2"></label>
+<input type="checkbox" name="lugar2" id="assentoH3" value="H3">
+<label for="H3"></label>
+<input type="checkbox" name="lugar3" id="assentoH4" value="H4">
+<label for="H4"></label>
+<input type="checkbox" name="lugar4" id="assentoH5" value="H5">
+<label for="H5"></label>
+<input type="checkbox" name="lugar5" id="assentoH6" value="H6">
+<label for="H6"></label>
+<input type="checkbox" name="lugar6" id="assentoH7" value="H7">
+<label for="H7"></label>
+<input type="checkbox" name="lugar7" id="assentoH8" value="H8">
+<label for="H8"></label> 
+<input type="checkbox" name="lugar8" id="assentoH9" value="H9">
+<label for="H9"></label>H
+<br><br>
+
+<button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button>
+<br>
+
+</main>
+<footer>
 
 
 
-    </footer>
+</footer>
+
+<script src="script.js"></script>
 </body>
 
 </html>
