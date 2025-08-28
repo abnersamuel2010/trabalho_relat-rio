@@ -5,7 +5,7 @@ document.getElementById('categoria').textContent = 'categoria: ' + categoria;
 }
 
 const terror = [
-{ id: "tr", nome: "Terrifier", preo: 25 },
+{ id: "tr", nome: "Terrifier", preco: 25  },
 { id: "hp", nome: "Hora do pesadelo", preco: 25 },
 { id: "s13", nome: "Sextafeira 13 ", preco: 25 },
 ]
@@ -91,5 +91,27 @@ function preencherOpcoes() {
     }
     
 }
-
 preencherOpcoes();
+
+function procurarPorId(lista, idProcurado) {
+    for (let i = 0; i < lista.length; i++) {
+    if (lista[i].id === idProcurado) {
+    return lista[i];
+    }
+    }
+    return null;
+}
+
+function gerarRelatorio(){
+        const nome = document.getElementById("nome").value;
+        const preco = parceInt(document.getElementById("preco").value);
+        const terrorId = document.getElementById("terror").value;
+        const aventuraId = document.getElementById("aventura").value;
+        const romanceId = document.getElementById("romance").value;
+        const comediaId = document.getElementById("comedia").value;
+        const dramaId = document.getElementById("drama").value;
+        const acaoId = document.getElementById("acao").value;
+
+        var terror = procurarPorId(terror, terrorId);
+}
+alert (terror);
