@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClassicCine</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassicCine</title>
 </head>
-
 <body>
+    
+</body>
+</html>
 
 <header>
 <img class="logotexto" src="img/logotipo1.png" alt="logotexto">
@@ -21,6 +20,10 @@
 
 <h2>Selecione sua categoria!</h2>
 
+<label>Categoria:
+<select id="categoria"></select>
+</label><br>
+<br>
 <label>Terror:
 <select id="terror"></select>
 </label><br>
@@ -66,38 +69,38 @@
 <input type="checkbox" name="lugar8" id="assentoA9" value="A9">
 <label for="A9"></label>A<BR>
 
-<input type="checkbox" name="lugar0" id="assentoB1" value="B1">
+<input type="checkbox" name="lugar9" id="assentoB1" value="B1">
 <label for="B1"></label>
-<input type="checkbox" name="lugar1" id="assentoB2" value="B2">
+<input type="checkbox" name="lugar10" id="assentoB2" value="B2">
 <label for="B2"></label>
-<input type="checkbox" name="lugar2" id="assentoB3" value="B3">
+<input type="checkbox" name="lugar11" id="assentoB3" value="B3">
 <label for="B3"></label>
-<input type="checkbox" name="lugar3" id="assentoB4" value="B4">
+<input type="checkbox" name="lugar12" id="assentoB4" value="B4">
 <label for="B4"></label>
-<input type="checkbox" name="lugar4" id="assentoB5" value="B5">
+<input type="checkbox" name="lugar13" id="assentoB5" value="B5">
 <label for="B5"></label>
-<input type="checkbox" name="lugar5" id="assentoB6" value="B6">
+<input type="checkbox" name="lugar14" id="assentoB6" value="B6">
 <label for="B6"></label>
-<input type="checkbox" name="lugar6" id="assentoB7" value="B7">
+<input type="checkbox" name="lugar15" id="assentoB7" value="B7">
 <label for="B7"></label>
-<input type="checkbox" name="lugar7" id="assentoB8" value="B8">
+<input type="checkbox" name="lugar16" id="assentoB8" value="B8">
 <label for="B8"></label>
-<input type="checkbox" name="lugar8" id="assentoB9" value="B9">
+<input type="checkbox" name="lugar17" id="assentoB9" value="B9">
 <label for="B9"></label>B<br>
 
-<input type="checkbox" name="lugar0" id="assentoC1" value="C1">
+<input type="checkbox" name="lugar18" id="assentoC1" value="C1">
 <label for="C1"></label>
-<input type="checkbox" name="lugar1" id="assentoC2" value="C2">
+<input type="checkbox" name="lugar19" id="assentoC2" value="C2">
 <label for="C2"></label>
-<input type="checkbox" name="lugar2" id="assentoC3" value="C3">
+<input type="checkbox" name="lugar20" id="assentoC3" value="C3">
 <label for="C3"></label>
-<input type="checkbox" name="lugar3" id="assentoC4" value="C4">
+<input type="checkbox" name="lugar21" id="assentoC4" value="C4">
 <label for="C4"></label>
-<input type="checkbox" name="lugar4" id="assentoC5" value="C5">
+<input type="checkbox" name="lugar22" id="assentoC5" value="C5">
 <label for="C5"></label>
-<input type="checkbox" name="lugar5" id="assentoC6" value="C6">
+<input type="checkbox" name="lugar23" id="assentoC6" value="C6">
 <label for="C6"></label>
-<input type="checkbox" name="lugar6" id="assentoC7" value="C7">
+<input type="checkbox" name="lugar24" id="assentoC7" value="C7">
 <label for="C7"></label>
 <input type="checkbox" name="lugar7" id="assentoC8" value="C8">
 <label for="C8"></label>
@@ -202,6 +205,8 @@
 
 <button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button>
 <br>
+
+<p id="funcionapfv"></p>
 
 </main>
 <footer>
