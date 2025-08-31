@@ -13,7 +13,7 @@ header {
 }
 
 main {
-    height: 1000px;
+    height: 1500px;
     text-align: center;
     align-items: center;
     color: white;
@@ -27,4 +27,14 @@ main {
 
 .ta {
     font-size: 50px;
+}
+.linha-assentos-A {
+
+    text-size-adjust: 50px;
+    
+}
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    
 }
