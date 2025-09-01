@@ -1,11 +1,11 @@
 const categoria = [
     { id: "Nenhuma", nome: "Nenhuma"},
-    { id: "Terror", nome: "Terror" },
-    { id: "Aventura", nome: "Aventura" },
-    { id: "Romance", nome: "Romance" },
-    { id: "Comedia", nome: "Comédia" },
-    { id: "Drama", nome: "Drama" },
-    { id: "Acao", nome: "Ação" },
+    { id: "Terror", nome: "Terror👻" },
+    { id: "Aventura", nome: "Aventura🗺️" },
+    { id: "Romance", nome: "Romance❤️" },
+    { id: "Comedia", nome: "Comédia🤣" },
+    { id: "Drama", nome: "Drama🌹" },
+    { id: "Acao", nome: "Ação🥊" },
 ]
 const terror = [
     { id: "tr", nome: "Terrifier" },
@@ -42,17 +42,17 @@ const acao = [
     { id: "sp", nome: "Superman" },
 ]
 const comida = [
-    { id: "n", nome: "Nenhuma", preco: 0 },
-    { id: "cb", nome: "Cachorro Quente", preco: 15 },
-    { id: "pp", nome: "Pipoca Pequena", preco: 10 },
-    { id: "pm", nome: "Pipoca Média", preco: 20 },
-    { id: "pg", nome: "Pipoca Grande", preco: 30 },
+    { id: "nehuma", nome: "Nenhuma", preco: 0 },
+    { id: "cb", nome: "Cachorro Quente🌭", preco: 15 },
+    { id: "pp", nome: "Pipoca Pequena🍿", preco: 10 },
+    { id: "pm", nome: "Pipoca Média🍿", preco: 20 },
+    { id: "pg", nome: "Pipoca Grande🍿", preco: 30 },
 ]
 const bebida = [
-    { id: "n", nome: "Nenhuma", preco: 'Nenhuma' },
-    { id: "cc", nome: "Coca Cola", preco: 10 },
-    { id: "pp", nome: "Pepsi", preco: 10 },
-    { id: "gr", nome: "Guaraná", preco: 10 },
+    { id: "nenhuma", nome: "Nenhuma", preco: 'Nenhuma' },
+    { id: "cc", nome: "Coca-Cola🥤", preco: 12 },
+    { id: "pp", nome: "Pepsi🥤", preco: 12 },
+    { id: "gr", nome: "Guaraná🥤", preco: 12 },
 ]
 const preco = [
     {id: "ingfilmes", nome: "Filmes", preco: 25 },
