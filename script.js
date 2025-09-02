@@ -1,5 +1,5 @@
 const categoria = [
-    { id: "Nenhuma", nome: "Nenhuma"},
+    { id: "Nenhuma", nome: "Nenhuma" },
     { id: "Terror", nome: "Terror👻" },
     { id: "Aventura", nome: "Aventura🗺️" },
     { id: "Romance", nome: "Romance❤️" },
@@ -55,7 +55,7 @@ const bebida = [
     { id: "gr", nome: "Guaraná🥤", preco: 12 },
 ]
 const preco = [
-    {id: "ingfilmes", nome: "Filmes", preco: 25 },
+    { id: "ingfilmes", nome: "Filmes", preco: 25 },
 ]
 
 function preencherOpcoes() {
@@ -147,30 +147,31 @@ function procurarPorId(lista, idProcurado) {
 }
 
 function gerarRelatorio() {
-  
-  const categoria = document.getElementById("categoria").value;
-  const ingressos = parseInt(document.getElementById("ingressos").value);
-  const comidaId = document.getElementById("comida").value;
-  const bebidaId = document.getElementById("bebida").value;
-  const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
-  const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
 
-  
-  const comidaSelecionada = procurarPorId(comida, comidaId);
-  const bebidaSelecionada = procurarPorId(bebida, bebidaId);
-  const precoIngresso = preco[0].preco;
-  const valorComida = comidaSelecionada.preco * quantidadeComida ;
-  const valorBebida = bebidaSelecionada.preco * quantidadeBebida ;
-  const total = (ingressos * precoIngresso) + valorComida + valorBebida;
+    const categoria = document.getElementById("categoria").value;
+    const ingressos = parseInt(document.getElementById("ingressos").value);
+    const comidaId = document.getElementById("comida").value;
+    const bebidaId = document.getElementById("bebida").value;
+    const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
+    const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
 
 
-  const relatorioHTML = `
+    const comidaSelecionada = procurarPorId(comida, comidaId);
+    const bebidaSelecionada = procurarPorId(bebida, bebidaId);
+    const precoIngresso = preco[0].preco;
+    const valorComida = comidaSelecionada.preco * quantidadeComida;
+    const valorBebida = bebidaSelecionada.preco * quantidadeBebida;
+    const total = (ingressos * precoIngresso) + valorComida + valorBebida;
+
+
+    const relatorioHTML = `
     <h2>Relatório</h2>
     <p><strong>Categoria:</strong> ${categoria}</p>
     <p><strong>Quantidade de ingressos:</strong> ${ingressos}</p>
     <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
     <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
     <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
+    <img class="interestelar" src="img/interestelar.jpg" alt="interestelar">
   `;
-  document.getElementById("relatorio").innerHTML = relatorioHTML;
+    document.getElementById("relatorio").innerHTML = relatorioHTML;
 }
