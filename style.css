@@ -1,15 +1,43 @@
 .logo {
-    width: 150px;
+    width: 160px;
 
 }
+
+.assentos {
+    width: 600px;
+}
+
+.filmee {
+    width: 400px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+
+    #relatorio,
+    #relatorio * {
+        visibility: visible;
+    }
+
+    #relatorio {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
 
 header {
     height: 150px;
     text-align: center;
     align-items: center;
-    background-color: (rgb(26, 0, 0));
-    background: rgb(26, 0, 0);
-    margin: 0;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
     border: 0;
 }
 
@@ -19,18 +47,21 @@ main {
     align-items: center;
     color: white;
     background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4),rgb(37, 1, 1));
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
     border: 0;
+    font-size: x-large;
 }
+
 footer {
     height: 500px;
     text-align: center;
     align-items: center;
     color: white;
-    background-image:linear-gradient(rgb(37, 1, 1), rgb(14, 1, 1));
+    background-image: linear-gradient(rgb(37, 1, 1), rgb(14, 1, 1));
 }
+
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    
+
 }
