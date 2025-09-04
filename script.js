@@ -9,21 +9,15 @@ const letras = [
     { id: "H", nome: "H" },
 ]
 const numeros = [
-    { id: "um", nome: "1" },
-    { id: "dois", nome: "2" },
-    { id: "tres", nome: "3" },
-    { id: "quatro", nome: "4" },
-    { id: "cinco", nome: "5" },
-    { id: "seis", nome: "6" },
-    { id: "sete", nome: "7" },
-    { id: "oito", nome: "8" },
-    { id: "nove", nome: "9" },
-    { id: "dez", nome: "10" },
-    { id: "onze", nome: "11" },
-    { id: "doze", nome: "12" },
-    { id: "treze", nome: "13" },
-    { id: "quatorze", nome: "14" },
-    { id: "nove", nome: "15" },
+    { id: "1", nome: "1" },
+    { id: "2", nome: "2" },
+    { id: "3", nome: "3" },
+    { id: "4", nome: "4" },
+    { id: "5", nome: "5" },
+    { id: "6", nome: "6" },
+    { id: "7", nome: "7" },
+    { id: "8", nome: "8" },
+    { id: "9", nome: "9" },
 ]
 
 const categoria = [
@@ -88,6 +82,22 @@ const preco = [
 
 function preencherOpcoes() {
 
+const selectnumeros = document.getElementById("numeros");
+for (let i = 0; i < numeros.length; i++) {
+const item = numeros[i];
+const option = document.createElement("option");
+option.value = item.id;
+option.textContent = item.nome;
+selectnumeros.appendChild(option);
+}
+const selectletras = document.getElementById("letras");
+for (let i = 0; i < letras.length; i++) {
+const item = letras[i];
+const option = document.createElement("option");
+option.value = item.id;
+option.textContent = item.nome;
+selectletras.appendChild(option);
+}
 const selectcategoria = document.getElementById("categoria");
 for (let i = 0; i < categoria.length; i++) {
 const item = categoria[i];
@@ -182,7 +192,8 @@ const comidaId = document.getElementById("comida").value;
 const bebidaId = document.getElementById("bebida").value;
 const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
 const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
-
+const letras = document.getElementById("letras").value;
+const numeros = document.getElementById("numeros").value;
 
 const comidaSelecionada = procurarPorId(comida, comidaId);
 const bebidaSelecionada = procurarPorId(bebida, bebidaId);
@@ -190,12 +201,14 @@ const precoIngresso = preco[0].preco;
 const valorComida = comidaSelecionada.preco * quantidadeComida;
 const valorBebida = bebidaSelecionada.preco * quantidadeBebida;
 const total = (ingressos * precoIngresso) + valorComida + valorBebida;
+const assentos = letras + numeros;
 
 
 const relatorioHTML = `
 <h2>Relatório</h2>
 <p><strong>Categoria:</strong> ${categoria}</p>
 <p><strong>Quantidade de ingressos:</strong> ${ingressos}</p>
+<p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
 <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
 <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
 <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
