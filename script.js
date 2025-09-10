@@ -65,21 +65,31 @@ const acao = [
 ]
 const comida = [
 { id: "nehuma", nome: "Nenhuma", preco: 0 },
-{ id: "cb", nome: "Cachorro Quente🌭", preco: 15 },
-{ id: "pp", nome: "Pipoca Pequena🍿", preco: 10 },
-{ id: "pm", nome: "Pipoca Média🍿", preco: 20 },
-{ id: "pg", nome: "Pipoca Grande🍿", preco: 30 },
+{ id: "cb", nome: "Cachorro Quente🌭 - 15R$", preco: 15 },
+{ id: "pp", nome: "Pipoca Pequena🍿 - 10R$", preco: 10 },
+{ id: "pm", nome: "Pipoca Média🍿 - 20R$", preco: 20 },
+{ id: "pg", nome: "Pipoca Grande🍿 - 30R$", preco: 30 },
+]
+const doce = [
+{ id: "nehum", nome: "Nenhum", preco: 0 },
+{ id: "fn", nome: "Fini - 8R$ - 90g", preco: 8 },
+{ id: "pc", nome: "Chocolate - 15R$", preco: 15 },
+{ id: "pd", nome: "Caramelo - 15R$", preco: 15 },
+{ id: "pa", nome: "Amor - 20R$", preco: 20 },
 ]
 const bebida = [
-{ id: "nenhuma", nome: "Nenhuma", preco: 'Nenhuma' },
-{ id: "cc", nome: "Coca-Cola🥤", preco: 12 },
-{ id: "pp", nome: "Pepsi🥤", preco: 12 },
-{ id: "gr", nome: "Guaraná🥤", preco: 12 },
+{ id: "nenhuma", nome: "Nenhuma", preco: 0 },
+{ id: "cc", nome: "Coca-Cola🥤 - 12R$", preco: 12 },
+{ id: "pp", nome: "Pepsi🥤 - 12R$", preco: 12 },
+{ id: "gr", nome: "Guaraná🥤 - 12R$", preco: 12 },
+]
+const combo = [
+{ id: "nenhum", nome: "Nenhum", preco: 0 },
+{ id: "cm", nome: "Pipoica Média e Coca-Cola - 35R$", preco: 35 },
 ]
 const preco = [
 { id: "ingfilmes", nome: "Filmes", preco: 25 },
 ]
-
 function preencherOpcoes() {
 
 const selectnumeros = document.getElementById("numeros");
@@ -122,7 +132,22 @@ option.value = item.id;
 option.textContent = item.nome;
 selectbebida.appendChild(option);
 }
-
+const selectcombo = document.getElementById("combo");
+for (let i = 0; i < combo.length; i++) {
+const item = combo[i];
+const option = document.createElement("option");
+option.value = item.id;
+option.textContent = item.nome;
+selectcombo.appendChild(option);
+}
+const selectdoce = document.getElementById("doce");
+for (let i = 0; i < doce.length; i++) {
+const item = doce[i];
+const option = document.createElement("option");
+option.value = item.id;
+option.textContent = item.nome;
+selectdoce.appendChild(option);
+}
 const selectterror = document.getElementById("terror");
 for (let i = 0; i < terror.length; i++) {
 const item = terror[i];
@@ -190,17 +215,21 @@ const categoria = document.getElementById("categoria").value;
 const ingressos = parseInt(document.getElementById("ingressos").value);
 const comidaId = document.getElementById("comida").value;
 const bebidaId = document.getElementById("bebida").value;
+const comboId = document.getElementById("combo").value;
 const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
 const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
+const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
 const letras = document.getElementById("letras").value;
 const numeros = document.getElementById("numeros").value;
 
 const comidaSelecionada = procurarPorId(comida, comidaId);
 const bebidaSelecionada = procurarPorId(bebida, bebidaId);
+const comboSelecionado = procurarPorId(combo, comboId);
 const precoIngresso = preco[0].preco;
 const valorComida = comidaSelecionada.preco * quantidadeComida;
 const valorBebida = bebidaSelecionada.preco * quantidadeBebida;
-const total = (ingressos * precoIngresso) + valorComida + valorBebida;
+const valorCombo = comboSelecionado.preco * quantidadeCombo;
+const total = (ingressos * precoIngresso) + valorComida + valorBebida + valorCombo;
 const assentos = letras + numeros;
 
 
@@ -211,6 +240,7 @@ const relatorioHTML = `
 <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
 <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
 <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
+<p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
 <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
 `;
 document.getElementById("relatorio").innerHTML = relatorioHTML;

@@ -2,91 +2,103 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassicCine</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassicCine</title>
+<link rel="ico" href="img/logotipo.png">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <header>
-        <img class="logo" src="img/logotipo.png" alt="logo">
+<header>
+<img class="logo" src="img/logotipo.png" alt="logotexto">
 
-    </header>
-    <main>
+</header>
+<main>
 
-        <h1 class="bv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
+<h1 class="bv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
 
-        <h2>Quantidade de Ingressos</h2>
+<h2>Quantidade de Ingressos</h2>
 
-        <label>Quantidade de Ingressos:
+<label>Quantidade de Ingressos:
 
-            <input type="number" id="ingressos" min="0" max="72" value="0">
+<input type="number" id="ingressos" min="0" max="96" value="0">
+<h6>25R$</h6>
+</label>
 
-        </label>
+<h2>Selecione sua categoria:</h2>
 
-        <h2>Selecione sua categoria:</h2>
+<label>Categoria:
+<select id="categoria">
+<select id="categoria"></select>
+</select>
+</label><br><br>
 
-        <label>Categoria:
-            <select id="categoria">
-                <select id="categoria"></select>
-            </select>
-        </label><br><br>
+<label>Terror:
+<select id="terror"></select>
+</label><br><br>
 
-        <label>Terror:
-            <select id="terror"></select>
-        </label><br><br>
+<label>Aventura:
+<select id="aventura"></select>
+</label><br><br>
 
-        <label>Aventura:
-            <select id="aventura"></select>
-        </label><br><br>
+<label>Romance:
+<select id="romance"></select>
+</label><br><br>
 
-        <label>Romance:
-            <select id="romance"></select>
-        </label><br><br>
+<label>Comedia:
+<select id="comedia"></select>
+</label><br><br>
 
-        <label>Comedia:
-            <select id="comedia"></select>
-        </label><br><br>
+<label>Drama:
+<select id="drama"></select>
+</label><br><br>
 
-        <label>Drama:
-            <select id="drama"></select>
-        </label><br><br>
+<label>Ação:
+<select id="acao"></select>
+</label><br><br>
 
-        <label>Ação:
-            <select id="acao"></select>
-        </label><br><br>
+<h3>Escolha sua comida:</h3>
+<select id="comida"></select>
+<input type="number" id="quantidadeComida" min="0" max="10" value="0"> </label><br>
+<br>
 
-        <h3>Escolha sua comida:</h3>
-        <select id="comida"></select>
-        <input type="number" id="quantidadeComida" min="0" max="10" value="0"> </label><br>
-        <br>
+<h3>Escolha sua bebida:</h3>
+<select id="bebida"></select>
+<input type="number" id="quantidadeBebida" min="0" max="10" value="0">
+<br><br>
 
-        <h3>Escolha sua bebida:</h3>
-        <select id="bebida"></select>
-        <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
-        <br><br>
+<h3>Escolha seu combo:</h3>
+<select id="combo"></select>
+<input type="number" id="quantidadeCombo" min="0" max="10" value="0">
+<br><br>
 
-        <img class="assentos" src="img/assentos.png " alt="assentos"><br><br>
+<img class="assentos" src="img/assentos.png" alt="mapa">
 
-        <select id="letras"></select>
+<br><br>
 
-        <select id="numeros"></select><br>
+<select id="letras"></select>
 
-        <button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button><br>
+<select id="numeros"></select>
 
-        <div id="relatorio"></div><br>
+<br>
 
-        <button onclick="window.print()">Gerar PDF do Relatório</button>
+<button type="button" onclick="gerarRelatorio()">Gerar Relatorio</button>
+<br>
 
-    </main>
-    <footer>
+<div id="relatorio"></div>
 
-    </footer>
+<br>
+<button onclick="window.print()">Gerar PDF do Relatório</button>
 
-    <script src="script.js"></script>
+</main>
+<footer>
+
+</footer>
+
+<script src="script.js"></script>
 </body>
 
 </html>
