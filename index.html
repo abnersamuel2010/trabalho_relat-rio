@@ -13,19 +13,21 @@
 <body>
 
 <header>
-<img class="logo" src="img/logotipo.png" alt="logotexto">
+
 
 </header>
 <main>
+
+<img class="logo" src="img/logotipo.png" alt="logotexto">
 
 <h1 class="bv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
 
 <h2>Quantidade de Ingressos</h2>
 
-<label>Quantidade de Ingressos:
+<label>Escolha seu(s) Ingresso(s):
+<select name="Ingressos" id="ingressos"></select>
+<input type="number" id="quantidadeIngressos" min="0" max="96" value="0">
 
-<input type="number" id="ingressos" min="0" max="96" value="0">
-<h6>25R$</h6>
 </label>
 
 <h2>Selecione sua categoria:</h2>
@@ -34,7 +36,10 @@
 <select id="categoria">
 <select id="categoria"></select>
 </select>
-</label><br><br>
+</label>
+
+<button type="button" onclick="gerarTerror()" >Enviar</button>
+<div id="terror"></div><br><br>
 
 <label>Terror:
 <select id="terror"></select>

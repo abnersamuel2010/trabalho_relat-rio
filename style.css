@@ -31,15 +31,7 @@
 }
 
 
-header {
-    height: 150px;
-    text-align: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
-}
+
 
 main {
     height: 1500px;

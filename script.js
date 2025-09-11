@@ -69,8 +69,9 @@ const comida = [
 { id: "pp", nome: "Pipoca Pequena🍿 - 10R$", preco: 10 },
 { id: "pm", nome: "Pipoca Média🍿 - 20R$", preco: 20 },
 { id: "pg", nome: "Pipoca Grande🍿 - 30R$", preco: 30 },
+{ id: "pgg", nome: "Pipoca Gigante🍿 - 40R$", preco: 40 },
 ]
-const doce = [
+const adicionais = [
 { id: "nehum", nome: "Nenhum", preco: 0 },
 { id: "fn", nome: "Fini - 8R$ - 90g", preco: 8 },
 { id: "pc", nome: "Chocolate - 15R$", preco: 15 },
@@ -83,15 +84,28 @@ const bebida = [
 { id: "pp", nome: "Pepsi🥤 - 12R$", preco: 12 },
 { id: "gr", nome: "Guaraná🥤 - 12R$", preco: 12 },
 ]
-const combo = [
-{ id: "nenhum", nome: "Nenhum", preco: 0 },
-{ id: "cm", nome: "Pipoica Média e Coca-Cola - 35R$", preco: 35 },
-]
-const preco = [
-{ id: "ingfilmes", nome: "Filmes", preco: 25 },
-]
-function preencherOpcoes() {
 
+const combo = [
+{ id: "nenhuma", nome: "Nenhuma",  preco: 0 },
+{ id: "Combo Classic", nome: "Combo Classic : Pipoca Grande (salgada) + Refrigerante Lata (350ml) + Fini(90g) - 40R$", preco: 40 },
+{ id: "Combo classic Duo", nome: "Pipoca Gigante / (salgada e doce) + (Refil) + 2 Refrigerante Lata + M&M (140g) ou 2 fini 60R$", preco: 60 },
+{ id: "Combo Classic Prime", nome: "Pipoca Grande (ealgada e doce) + (Balde ou copo personalizado) copo (500ML) Refil + 1 Unidade de Ingresso 80R$", preco:80 },
+{ id: "Combo Classic Supremo ", nome: "Balde Grande personalizado (Refil) (salgada e doce) + Copo Personalizado (500ML) + Copo de açai (350ML) + (KItKat e 1 fini) + 1 Unidade de Ingresso 120R$ ", preco: 120 },
+]
+const ingressos = [
+{ id: "inteira", nome: "Inteira", preco: 25 },
+{ id: "meia", nome: "Meia-Entrada", preco: 12 },
+]
+
+function preencherOpcoes() {
+const selectingressos = document.getElementById("ingressos");
+for (let i = 0; i < ingressos.length; i++) {
+const item = ingressos[i];
+const option = document.createElement("option");
+option.value = item.id;
+option.textContent = item.nome;
+selectingressos.appendChild(option);
+}
 const selectnumeros = document.getElementById("numeros");
 for (let i = 0; i < numeros.length; i++) {
 const item = numeros[i];
@@ -197,6 +211,16 @@ option.textContent = item.nome;
 selectacao.appendChild(option);
 }
 
+function gerarTerror() {
+
+const terrorHTML = `  
+<img class="terrifier" src="img/terrifier.jpg" alt="terrifier">
+    
+    `;
+document.getElementById("terror").innerHTML = terrorHTML;
+
+}
+
 }
 preencherOpcoes();
 
@@ -211,37 +235,42 @@ return null;
 
 function gerarRelatorio() {
 
+const letras = document.getElementById("letras").value;
+const numeros = document.getElementById("numeros").value;
 const categoria = document.getElementById("categoria").value;
-const ingressos = parseInt(document.getElementById("ingressos").value);
+const ingressosId = document.getElementById("ingressos").value;
 const comidaId = document.getElementById("comida").value;
 const bebidaId = document.getElementById("bebida").value;
 const comboId = document.getElementById("combo").value;
+const quantidadeIngressos = parseInt(document.getElementById("quantidadeIngressos").value);
 const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
 const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
 const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
-const letras = document.getElementById("letras").value;
-const numeros = document.getElementById("numeros").value;
 
-const comidaSelecionada = procurarPorId(comida, comidaId);
-const bebidaSelecionada = procurarPorId(bebida, bebidaId);
-const comboSelecionado = procurarPorId(combo, comboId);
-const precoIngresso = preco[0].preco;
+var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
+var comidaSelecionada = procurarPorId(comida, comidaId);
+var bebidaSelecionada = procurarPorId(bebida, bebidaId);
+var comboSelecionado = procurarPorId(combo, comboId);
+
+const valorIngresso = ingressosSelecionada.preco * quantidadeIngressos
 const valorComida = comidaSelecionada.preco * quantidadeComida;
 const valorBebida = bebidaSelecionada.preco * quantidadeBebida;
 const valorCombo = comboSelecionado.preco * quantidadeCombo;
-const total = (ingressos * precoIngresso) + valorComida + valorBebida + valorCombo;
+const total = valorIngresso + valorComida + valorBebida + valorCombo;
 const assentos = letras + numeros;
 
 
 const relatorioHTML = `
 <h2>Relatório</h2>
 <p><strong>Categoria:</strong> ${categoria}</p>
-<p><strong>Quantidade de ingressos:</strong> ${ingressos}</p>
+<p><strong>Tipos de Ingressos:</strong> ${ingressosSelecionada.nome}</p>
+<p><strong>Quantidade de ingressos:</strong> ${quantidadeIngressos}</p>
 <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
 <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
 <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
 <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
 <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
+
 `;
 document.getElementById("relatorio").innerHTML = relatorioHTML;
 }
