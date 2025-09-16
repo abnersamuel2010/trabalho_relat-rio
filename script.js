@@ -20,15 +20,6 @@ const numeros = [
     { id: "9", nome: "9" },
 ]
 
-const categoria = [
-{ id: "Nenhuma", nome: "Nenhuma" },
-{ id: "Terror", nome: "Terror👻" },
-{ id: "Aventura", nome: "Aventura🗺️" },
-{ id: "Romance", nome: "Romance❤️" },
-{ id: "Comedia", nome: "Comédia🤣" },
-{ id: "Drama", nome: "Drama🌹" },
-{ id: "Acao", nome: "Ação🥊" },
-]
 const terror = [
 { id: "tr", nome: "Terrifier" },
 { id: "hp", nome: "Hora do pesadelo" },
@@ -56,7 +47,7 @@ const comedia = [
 const drama = [
 { id: "ce", nome: "Culpa das estrelas" },
 { id: "st", nome: "Show de truman" },
-{ id: "it", nome: "Interstelar" },
+{ id: "it", nome: "Interestelar" },
 ]
 const acao = [
 { id: "f1", nome: "Formula 1" },
@@ -64,7 +55,7 @@ const acao = [
 { id: "sp", nome: "Superman" },
 ]
 const comida = [
-{ id: "nehuma", nome: "Nenhuma", preco: 0 },
+{ id: "nenhuma", nome: "Nenhuma", preco: 0 },
 { id: "cb", nome: "Cachorro Quente🌭 - 15R$", preco: 15 },
 { id: "pp", nome: "Pipoca Pequena🍿 - 10R$", preco: 10 },
 { id: "pm", nome: "Pipoca Média🍿 - 20R$", preco: 20 },
@@ -72,7 +63,7 @@ const comida = [
 { id: "pgg", nome: "Pipoca Gigante🍿 - 40R$", preco: 40 },
 ]
 const adicionais = [
-{ id: "nehum", nome: "Nenhum", preco: 0 },
+{ id: "nenhum", nome: "Nenhum", preco: 0 },
 { id: "fn", nome: "Fini - 8R$ - 90g", preco: 8 },
 { id: "pc", nome: "Chocolate - 15R$", preco: 15 },
 { id: "pd", nome: "Caramelo - 15R$", preco: 15 },
@@ -154,14 +145,7 @@ option.value = item.id;
 option.textContent = item.nome;
 selectcombo.appendChild(option);
 }
-const selectdoce = document.getElementById("doce");
-for (let i = 0; i < doce.length; i++) {
-const item = doce[i];
-const option = document.createElement("option");
-option.value = item.id;
-option.textContent = item.nome;
-selectdoce.appendChild(option);
-}
+
 const selectterror = document.getElementById("terror");
 for (let i = 0; i < terror.length; i++) {
 const item = terror[i];
@@ -211,16 +195,6 @@ option.textContent = item.nome;
 selectacao.appendChild(option);
 }
 
-function gerarTerror() {
-
-const terrorHTML = `  
-<img class="terrifier" src="img/terrifier.jpg" alt="terrifier">
-    
-    `;
-document.getElementById("terror").innerHTML = terrorHTML;
-
-}
-
 }
 preencherOpcoes();
 
@@ -232,6 +206,16 @@ return lista[i];
 }
 return null;
 }
+function gerarCategoria() {
+
+    const categoriaHTML = `  
+        <img class="terrifier" src="img/terrifier.jpg" alt="terrifier">
+        
+        `;
+    document.getElementById("terror").innerHTML = categoriaHTML;
+
+}
+
 
 function gerarRelatorio() {
 
@@ -261,16 +245,17 @@ const assentos = letras + numeros;
 
 
 const relatorioHTML = `
-<h2>Relatório</h2>
-<p><strong>Categoria:</strong> ${categoria}</p>
-<p><strong>Tipos de Ingressos:</strong> ${ingressosSelecionada.nome}</p>
-<p><strong>Quantidade de ingressos:</strong> ${quantidadeIngressos}</p>
-<p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
-<p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
-<p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
-<p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
-<p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
-
-`;
+    <h2>Relatório</h2>
+    <p><strong>Categoria:</strong> ${categoria}</p>
+    <p><strong>Tipos de Ingressos:</strong> ${ingressosSelecionada.nome}</p>
+    <p><strong>Quantidade de ingressos:</strong> ${quantidadeIngressos}</p>
+    <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
+    <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
+    <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
+    <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
+    <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
+    <p><strong>Obrigado por comprar conosco!</strong></p>
+    <img class="terrifier" src="img/terrifier.jpg" alt="terrifier">
+    `;
 document.getElementById("relatorio").innerHTML = relatorioHTML;
 }
