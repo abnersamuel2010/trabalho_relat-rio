@@ -19,40 +19,48 @@ const numeros = [
     { id: "8", nome: "8" },
     { id: "9", nome: "9" },
 ]
-
-const terror = [
-{ id: "tr", nome: "Terrifier" },
-{ id: "hp", nome: "Hora do pesadelo" },
-{ id: "s13", nome: "Sextafeira 13 " },
+const categoria = [
+    { id: "Terror", nome: "Terror👻" },
+    { id: "Aventura", nome: "Aventura🗺️" },
+    { id: "Romance", nome: "Romance❤️" },
+    { id: "Comedia", nome: "Comédia🤣" },
+    { id: "Drama", nome: "Drama🌹" },
+    { id: "Acao", nome: "Ação🥊" },
 ]
 
-const aventura = [
-{ id: "jj", nome: "Jumanji" },
-{ id: "vg", nome: "Vingadores" },
-{ id: "vf", nome: "Velores e Furiosos" },
+const Filmesterror = [
+    { id: "tr", nome: "Terrifier" },
+    { id: "hp", nome: "Hora do pesadelo" },
+    { id: "s13", nome: "Sextafeira 13 " },
+] 
+
+const Filmesaventura = [
+    { id: "jj", nome: "Jumanji" },
+    { id: "vg", nome: "Vingadores" },
+    { id: "vf", nome: "Velores e Furiosos" },
 ]
 
-const romance = [
-{ id: "tc", nome: "Titanic" },
-{ id: "cv", nome: "Como eu era antes de você" },
-{ id: "10o", nome: "10 coisas que eu odeio você" },
+const Filmesromance = [
+    { id: "tc", nome: "Titanic" },
+    { id: "cv", nome: "Como eu era antes de você" },
+    { id: "10o", nome: "10 coisas que eu odeio você" },
 ]
 
-const comedia = [
-{ id: "mg", nome: "Um maluco no golf" },
-{ id: "dt", nome: "De repente trinta" },
-{ id: "gg", nome: "Gente grande" },
+const Filmescomedia = [
+    { id: "mg", nome: "Um maluco no golf" },
+    { id: "dt", nome: "De repente trinta" },
+    { id: "gg", nome: "Gente grande" },
 ]
 
-const drama = [
-{ id: "ce", nome: "Culpa das estrelas" },
-{ id: "st", nome: "Show de truman" },
-{ id: "it", nome: "Interestelar" },
+const Filmesdrama = [
+    { id: "ce", nome: "Culpa das estrelas" },
+    { id: "st", nome: "Show de truman" },
+    { id: "it", nome: "Interestelar" },
 ]
-const acao = [
-{ id: "f1", nome: "Formula 1" },
-{ id: "qf", nome: "Quarteto Fantástico" },
-{ id: "sp", nome: "Superman" },
+const Filmesacao = [
+    { id: "f1", nome: "Formula 1" },
+    { id: "qf", nome: "Quarteto Fantástico" },
+    { id: "sp", nome: "Superman" },
 ]
 const comida = [
 { id: "nenhuma", nome: "Nenhuma", preco: 0 },
@@ -209,7 +217,11 @@ return null;
 function gerarCategoria() {
 
     const categoriaHTML = `  
-        <img class="terrifier" src="img/terrifier.jpg" alt="terrifier">
+        <select id="Terror">
+            <option value="Terrifier"></option>
+            <option value="Hora do pesadelo"></option>
+            <option value="Sextafeira 13"></option>
+        </select>
         
         `;
     document.getElementById("terror").innerHTML = categoriaHTML;
