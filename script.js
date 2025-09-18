@@ -154,71 +154,75 @@ function preencherOpcoes() {
         selectcombo.appendChild(option);
     }
 
-    const selectterror = document.getElementById("terror");
-    for (let i = 0; i < terror.length; i++) {
-        const item = terror[i];
+    const selectFilmesterror = document.getElementById("Filmesterror");
+    for (let i = 0; i < Filmesterror.length; i++) {
+        const item = Filmesterror[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectterror.appendChild(option);
+        selectFilmesterror.appendChild(option);
     }
-    const selectaventura = document.getElementById("aventura");
-    for (let i = 0; i < aventura.length; i++) {
-        const item = aventura[i];
+    const selectFilmesaventura = document.getElementById("Filmesaventura");
+    for (let i = 0; i < Filmesaventura.length; i++) {
+        const item = Filmesaventura[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectaventura.appendChild(option);
+        selectFilmesaventura.appendChild(option);
     }
-    const selectromance = document.getElementById("romance");
-    for (let i = 0; i < romance.length; i++) {
-        const item = romance[i];
+    const selectFilmesromance = document.getElementById("Filmesromance");
+    for (let i = 0; i < Filmesromance.length; i++) {
+        const item = Filmesromance[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectromance.appendChild(option);
+        selectFilmesromance.appendChild(option);
     }
-    const selectcomedia = document.getElementById("comedia");
-    for (let i = 0; i < comedia.length; i++) {
-        const item = comedia[i];
+    const selectFilmescomedia = document.getElementById("Filmescomedia");
+    for (let i = 0; i < Filmescomedia.length; i++) {
+        const item = Filmescomedia[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectcomedia.appendChild(option);
+        selectFilmescomedia.appendChild(option);
     }
-    const selectdrama = document.getElementById("drama");
-    for (let i = 0; i < drama.length; i++) {
-        const item = drama[i];
+    const selectFilmesdrama = document.getElementById("Filmesdrama");
+    for (let i = 0; i < Filmesdrama.length; i++) {
+        const item = Filmesdrama[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectdrama.appendChild(option);
+        selectFilmesdrama.appendChild(option);
     }
-    const selectacao = document.getElementById("acao");
-    for (let i = 0; i < acao.length; i++) {
-        const item = acao[i];
+    const selectFilmesacao = document.getElementById("Filmesacao");
+    for (let i = 0; i < Filmesacao.length; i++) {
+        const item = Filmesacao[i];
         const option = document.createElement("option");
         option.value = item.id;
         option.textContent = item.nome;
-        selectacao.appendChild(option);
+        selectFilmesacao.appendChild(option);
     }
 
 }
 
-if ( categoria = terror ){
+function gerarCategoria() {
 
-    function gerarCategoria() {
+const categoriaSelecionada = document.getElementById("categoria").value;
 
-        const categoriaHTML = `  
-            <label>Terror:
-                <select id="Filmesterror"></select>
-            </label>
-            
-            `;
-        document.getElementById("terror").innerHTML = categoriaHTML;
-
-    }
+if ( categoriaSelecionada == "terror"){
+    
+    const categoriaHTML = `  
+        <label>Terror:
+        <select id="Filmesterror"></select>
+        </label>
+        
+        `;
+    document.getElementById("terror").innerHTML = categoriaHTML;
 }
+
+
+}
+
 preencherOpcoes();
 
 function procurarPorId(lista, idProcurado) {
