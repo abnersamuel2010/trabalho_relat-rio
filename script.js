@@ -205,22 +205,67 @@ function preencherOpcoes() {
 
 }
 
+preencherOpcoes();
+
 function gerarCategoria() {
 
 const categoriaSelecionada = document.getElementById("categoria").value;
 
-if ( categoriaSelecionada == "terror"){
-    
-    const categoriaHTML = `  
-        <label>Terror:
-        <select id="Filmesterror"></select>
-        </label>
-        
+    if (categoriaSelecionada == "terror") {
+        const categoriaHTML = `  
+            <label>Terror:
+            <select id="Filmesterror"></select>
+            </label>
         `;
-    document.getElementById("terror").innerHTML = categoriaHTML;
-}
-
-
+        document.getElementById("terror").innerHTML = categoriaHTML;
+        preencherOpcoes("terror");//chama as opcoes de filmes de terror
+        return 0
+    }
+    else if (categoriaSelecionada == "aventura") {
+        const categoriaHTML = `  
+            <label>Aventura:
+            <select id="Filmesaventura"></select>
+            </label>
+        `;
+        document.getElementById("aventura").innerHTML = categoriaHTML;
+        preencherOpcoes("aventura");//chama as opcoes de filmes de aventura
+    }
+    else if (categoriaSelecionada == "romance") {
+        const categoriaHTML = `  
+            <label>Romance:
+            <select id="Filmesromance"></select>
+            </label>
+        `;
+        document.getElementById("romance").innerHTML = categoriaHTML;
+        preencherOpcoes("romance");//chama as opcoes de filmes de romance
+    }
+    else if (categoriaSelecionada == "comedia") {
+        const categoriaHTML = `  
+            <label>Comédia:
+            <select id="Filmescomedia"></select>
+            </label>
+        `;
+        document.getElementById("comedia").innerHTML = categoriaHTML;
+        preencherOpcoes("comedia");//chama as opcoes de filmes de comedia
+    }
+    else if (categoriaSelecionada == "drama") {
+        const categoriaHTML = `  
+            <label>Drama:
+            <select id="Filmesdrama"></select>
+            </label>
+        `;
+        document.getElementById("drama").innerHTML = categoriaHTML;
+        preencherOpcoes("drama");//chama as opcoes de filmes de drama
+    }
+    else if (categoriaSelecionada == "acao") {
+        const categoriaHTML = `  
+            <label>Ação:
+            <select id="Filmesacao"></select>
+            </label>
+        `;
+        document.getElementById("acao").innerHTML = categoriaHTML;
+        preencherOpcoes("acao");//chama as opcoes de filmes de acao]
+    }
 }
 
 preencherOpcoes();
@@ -247,6 +292,21 @@ function gerarRelatorio() {
     const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
     const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
     const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
+
+    var filmeSelecionado;
+    if (categoria == "terror") {
+        filmeSelecionado = document.getElementById("Filmesterror").value;
+    } else if (categoria == "aventura") {
+        filmeSelecionado = document.getElementById("Filmesaventura").value;
+    } else if (categoria == "romance") {
+        filmeSelecionado = document.getElementById("Filmesromance").value;
+    } else if (categoria == "comedia") {
+        filmeSelecionado = document.getElementById("Filmescomedia").value;
+    } else if (categoria == "drama") {
+        filmeSelecionado = document.getElementById("Filmesdrama").value;
+    } else if (categoria == "acao") {
+        filmeSelecionado = document.getElementById("Filmesacao").value;
+    }
 
     var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
     var comidaSelecionada = procurarPorId(comida, comidaId);
