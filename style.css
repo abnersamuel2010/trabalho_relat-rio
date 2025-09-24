@@ -7,10 +7,6 @@
     width: 600px;
 }
 
-.filmee {
-    width: 400px;
-}
-
 @media print {
     body * {
         visibility: hidden;

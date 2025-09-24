@@ -18,7 +18,7 @@ const numeros = [
     { id: "7", nome: "7" },
     { id: "8", nome: "8" },
     { id: "9", nome: "9" },
-    
+
 ]
 const categoria = [
     { id: "terror", nome: "Terror👻" },
@@ -86,11 +86,11 @@ const bebida = [
 ]
 
 const combo = [
-{ id: "nenhuma", nome: "Nenhuma", preco: 0 },
-{ id: "Combo Classic", nome: "Pipoca Grande(salgada) + Refrigerante(350ml) - 40R$", preco: 40 },
-{ id: "Combo classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 60R$", preco: 60 },
-{ id: "Combo Classic Prime", nome: "Pipoca Grande(salgada ou doce) + Balde/Copo personalizado(Copo Refil) - 80R$", preco:80 },
-{ id: "Combo Classic Supremo ", nome: "Balde Grande personalizado(Refil) (salgada ou doce) + Copo Personalizado - 120R$ ", preco: 120 },
+    { id: "nenhuma", nome: "Nenhuma", preco: 0 },
+    { id: "Combo Classic", nome: "Pipoca Grande(salgada) + Refrigerante(350ml) - 40R$", preco: 40 },
+    { id: "Combo classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 60R$", preco: 60 },
+    { id: "Combo Classic Prime", nome: "Pipoca Grande(salgada ou doce) + Balde/Copo personalizado(Copo Refil) - 80R$", preco: 80 },
+    { id: "Combo Classic Supremo ", nome: "Balde Grande personalizado(Refil) (salgada ou doce) + Copo Personalizado - 120R$ ", preco: 120 },
 ]
 const ingressos = [
     { id: "inteira", nome: "Inteira", preco: 25 },
@@ -155,19 +155,19 @@ function preencherOpcoes() {
         selectcombo.appendChild(option);
     }
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 }
 
 
 function gerarCategoria() {
 
-const categoriaSelecionada = document.getElementById("categoria").value;
+    const categoriaSelecionada = document.getElementById("categoria").value;
 
     if (categoriaSelecionada == "terror") {
         const categoriaHTML = `  
@@ -176,7 +176,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             </label>
 
         `;
-        document.getElementById("terror").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesterror = document.getElementById("Filmesterror");
         for (let i = 0; i < Filmesterror.length; i++) {
@@ -185,7 +185,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesterror.appendChild(option);
-    }
+        }
     }
     if (categoriaSelecionada == "aventura") {
         const categoriaHTML = `  
@@ -194,7 +194,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             </label>
 
         `;
-        document.getElementById("aventura").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesaventura = document.getElementById("Filmesaventura");
         for (let i = 0; i < Filmesaventura.length; i++) {
@@ -203,7 +203,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesaventura.appendChild(option);
-            }
+        }
     }
     if (categoriaSelecionada == "romance") {
         const categoriaHTML = `  
@@ -212,7 +212,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             </label>
             
         `;
-        document.getElementById("romance").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesromance = document.getElementById("Filmesromance");
         for (let i = 0; i < Filmesromance.length; i++) {
@@ -221,7 +221,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesromance.appendChild(option);
-    }
+        }
     }
     if (categoriaSelecionada == "comedia") {
         const categoriaHTML = `  
@@ -229,7 +229,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             <select id="Filmescomedia"></select>
             </label>
         `;
-        document.getElementById("comedia").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmescomedia = document.getElementById("Filmescomedia");
         for (let i = 0; i < Filmescomedia.length; i++) {
@@ -238,15 +238,15 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmescomedia.appendChild(option);
-            }    
         }
+    }
     if (categoriaSelecionada == "drama") {
         const categoriaHTML = `  
             <label>Drama:
             <select id="Filmesdrama"></select>
             </label>
         `;
-        document.getElementById("drama").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesdrama = document.getElementById("Filmesdrama");
         for (let i = 0; i < Filmesdrama.length; i++) {
@@ -255,7 +255,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesdrama.appendChild(option);
-    }
+        }
     }
     if (categoriaSelecionada == "acao") {
         const categoriaHTML = `  
@@ -263,7 +263,7 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             <select id="Filmesacao"></select>
             </label>
         `;
-        document.getElementById("acao").innerHTML = categoriaHTML;
+        document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesacao = document.getElementById("Filmesacao");
         for (let i = 0; i < Filmesacao.length; i++) {
@@ -272,8 +272,15 @@ const categoriaSelecionada = document.getElementById("categoria").value;
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesacao.appendChild(option);
+        }
     }
-    }
+}
+
+function gerarFilme() {
+
+    filmeSelecionado
+    if ( )
+
 }
 
 preencherOpcoes();
@@ -302,18 +309,18 @@ function gerarRelatorio() {
     const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
 
     if (categoria == "terror") {
-            filmeSelecionado = document.getElementById("Filmesterror").value;
+        filmeSelecionado = document.getElementById("Filmesterror").value;
     } else if (categoria == "aventura") {
-            filmeSelecionado = document.getElementById("Filmesaventura").value;
+        filmeSelecionado = document.getElementById("Filmesaventura").value;
     } else if (categoria == "romance") {
-            filmeSelecionado = document.getElementById("Filmesromance").value;
+        filmeSelecionado = document.getElementById("Filmesromance").value;
     } else if (categoria == "comedia") {
-            filmeSelecionado = document.getElementById("Filmescomedia").value;
-        } else if (categoria == "drama") {
-            filmeSelecionado = document.getElementById("Filmesdrama").value;
-        } else if (categoria == "acao") {
-            filmeSelecionado = document.getElementById("Filmesacao").value;
-        }
+        filmeSelecionado = document.getElementById("Filmescomedia").value;
+    } else if (categoria == "drama") {
+        filmeSelecionado = document.getElementById("Filmesdrama").value;
+    } else if (categoria == "acao") {
+        filmeSelecionado = document.getElementById("Filmesacao").value;
+    }
     var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
     var comidaSelecionada = procurarPorId(comida, comidaId);
     var bebidaSelecionada = procurarPorId(bebida, bebidaId);
