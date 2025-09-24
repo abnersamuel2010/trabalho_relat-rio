@@ -20,12 +20,12 @@ const numeros = [
     { id: "9", nome: "9" },
 ]
 const categoria = [
-    { id: "terror", nome: "Terror👻" },
-    { id: "aventura", nome: "Aventura🗺️" },
-    { id: "romance", nome: "Romance❤️" },
-    { id: "comedia", nome: "Comédia🤣" },
-    { id: "drama", nome: "Drama🌹" },
-    { id: "acao", nome: "Ação🥊" },
+    { id: "Terror", nome: "Terror👻" },
+    { id: "Aventura", nome: "Aventura🗺️" },
+    { id: "Romance", nome: "Romance❤️" },
+    { id: "Comedia", nome: "Comédia🤣" },
+    { id: "Drama", nome: "Drama🌹" },
+    { id: "Acao", nome: "Ação🥊" },
 ]
 
 const Filmesterror = [
@@ -290,12 +290,6 @@ function gerarRelatorio() {
     const numeros = document.getElementById("numeros").value;
     const categoria = document.getElementById("categoria").value;
     const ingressosId = document.getElementById("ingressos").value;
-    const terrorId = document.getElementByNome("Filmesterror").value;
-    const aventuraId = document.getElementByNome("Filmesaventura").value;
-    const romanceId = document.getElementByNome("Filmesromance").value;
-    const comediaId = document.getElementByNome("Filmescomedia").value;
-    const dramaId = document.getElementByNome("Filmesdrama").value;
-    const acaoId = document.getElementByNome("Filmesacao").value;
     const comidaId = document.getElementById("comida").value;
     const bebidaId = document.getElementById("bebida").value;
     const comboId = document.getElementById("combo").value;
