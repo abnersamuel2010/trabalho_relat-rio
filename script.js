@@ -174,6 +174,7 @@ function gerarCategoria() {
             <label>Terror:
             <select id="Filmesterror"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -192,6 +193,7 @@ function gerarCategoria() {
             <label>Aventura:
             <select id="Filmesaventura"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -210,6 +212,7 @@ function gerarCategoria() {
             <label>Romance:
             <select id="Filmesromance"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
             
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -228,6 +231,7 @@ function gerarCategoria() {
             <label>Comédia:
             <select id="Filmescomedia"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
@@ -245,6 +249,7 @@ function gerarCategoria() {
             <label>Drama:
             <select id="Filmesdrama"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
@@ -262,6 +267,7 @@ function gerarCategoria() {
             <label>Ação:
             <select id="Filmesacao"></select>
             </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
         `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
@@ -276,11 +282,135 @@ function gerarCategoria() {
     }
 }
 
+
 function gerarFilme() {
-
-    filmeSelecionado
-    if ( )
-
+    const categoriaSelecionada = document.getElementById("categoria").value;
+    if (categoriaSelecionada == "terror") {
+        const filmeSelecionado = document.getElementById("Filmesterror").value;
+        if (filmeSelecionado == "Terrifier") {
+            const filmeHTML = `
+            <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Hora do Pesadelo") {
+            const filmeHTML = `
+            <img src="img/ahoradopesadelo.jpg" alt="horadopesadelo" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Sextafeira 13") {
+            const filmeHTML = `
+            <img src="img/sextafeira13.jpg" alt="sextafeira13" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
+    if (categoriaSelecionada == "aventura") {
+        const filmeSelecionado = document.getElementById("Filmesaventura").value;
+        if (filmeSelecionado == "Jumanji") {
+            const filmeHTML = `
+            <img src="img/jumanji.jpg" alt="jumanji" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Vingadores") {
+            const filmeHTML = `
+            <img src="img/vingadores.jpg" alt="vingadores" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Velores e Furiosos") {
+            const filmeHTML = `
+            <img src="img/velozesefuriosos.jpg" alt="velozesefuriosos" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
+    if (categoriaSelecionada == "romance") {
+        const filmeSelecionado = document.getElementById("Filmesromance").value;
+        if (filmeSelecionado == "Titanic") {
+            const filmeHTML = `
+            <img src="img/titanic.jpg" alt="titanic" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Como eu era antes de você") {
+            const filmeHTML = `
+            <img src="img/comoeueraantesdevoce.jpg" alt="comoeueraantesdevoce" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "10 coisas que eu odeio você") {
+            const filmeHTML = `
+            <img src="img/10coisaodeio.jpg" alt="10coisaseueodio" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
+    if (categoriaSelecionada == "comedia") {
+        const filmeSelecionado = document.getElementById("Filmescomedia").value;
+        if (filmeSelecionado == "Um maluco no golf") {
+            const filmeHTML = `
+            <img src="img/malucogolf.jpg" alt="ummaluconogolf" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "De repente trinta") {
+            const filmeHTML = `
+            <img src="img/derepentetrinta.jpg" alt="derepentetinta" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Gente grande") {
+            const filmeHTML = `
+            <img src="img/gentegrande.jpg" alt="gentegande" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
+    if (categoriaSelecionada == "drama") {
+        const filmeSelecionado = document.getElementById("Filmesdrama").value;
+        if (filmeSelecionado == "Culpa das estrelas") {
+            const filmeHTML = `
+            <img src="img/culpadasestrelas.jpg" alt="culpadasestrelas" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Show de truman") {
+            const filmeHTML = `
+            <img src="img/truman.jpg" alt="showdetruman" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Interestelar") {
+            const filmeHTML = `
+            <img src="img/interestelar.jpg" alt="interestelar" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
+    if (categoriaSelecionada == "acao") {
+        const filmeSelecionado = document.getElementById("Filmesacao").value;
+        if (filmeSelecionado == "Formula 1") {
+            const filmeHTML = `
+            <img src="img/formula1.jpg" alt="formula1" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Quarteto Fantástico") {
+            const filmeHTML = `
+            <img src="img/quartetofantastico.jpg" alt="quartetofantastico" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+        if (filmeSelecionado == "Superman") {
+            const filmeHTML = `
+            <img src="img/superman.jpg" alt="superman" class="tamanhoFilme">
+            `;
+            document.getElementById("mostrarfilme").innerHTML = filmeHTML;
+        }
+    }
 }
 
 preencherOpcoes();
