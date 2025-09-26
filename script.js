@@ -154,16 +154,7 @@ function preencherOpcoes() {
         option.textContent = item.nome;
         selectcombo.appendChild(option);
     }
-
-
-
-
-
-
-
-
 }
-
 
 function gerarCategoria() {
 
