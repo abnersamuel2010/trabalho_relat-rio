@@ -97,9 +97,9 @@ const ingressos = [
     { id: "meia", nome: "Meia-Entrada", preco: 12 },
 ]
 
-function preencherOpcoes() {
+function preencherOpcoes() {//é chamada na linha 407
     const selectingressos = document.getElementById("ingressos");
-    for (let i = 0; i < ingressos.length; i++) {
+    for (let i = 0; i < ingressos.length; i++) {//repete o que esta dentro dos parenteses ate o final da lista
         const item = ingressos[i];
         const option = document.createElement("option");
         option.value = item.id;
