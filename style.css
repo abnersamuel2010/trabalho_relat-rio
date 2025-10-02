@@ -5,7 +5,7 @@
 
 }
 .tamanhoFilme {
-    width: 250px;
+    width: 150px;
 }
 
 
@@ -41,7 +41,7 @@
 
 
 main {
-    height: 1500px;
+    height: 2000px;
     text-align: center;
     align-items: center;
     color: white;
@@ -56,4 +56,14 @@ footer {
     align-items: center;
     color: white;
     background-image: linear-gradient(rgb(37, 1, 1), rgb(14, 1, 1));
+}
+
+body{
+    height: 2000px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
+    border: 0;
 }

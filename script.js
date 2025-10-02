@@ -21,12 +21,12 @@ const numeros = [
 
 ]
 const categoria = [
-    { id: "terror", nome: "Terror👻" },
-    { id: "aventura", nome: "Aventura🗺️" },
-    { id: "romance", nome: "Romance❤️" },
-    { id: "comedia", nome: "Comédia🤣" },
-    { id: "drama", nome: "Drama🌹" },
-    { id: "acao", nome: "Ação🥊" },
+    { id: "Terror", nome: "Terror👻" },
+    { id: "Aventura", nome: "Aventura🗺️" },
+    { id: "Romance", nome: "Romance❤️" },
+    { id: "Comedia", nome: "Comédia🤣" },
+    { id: "Drama", nome: "Drama🌹" },
+    { id: "Acao", nome: "Ação🥊" },
 ]
 
 const Filmesterror = [
@@ -160,8 +160,8 @@ function gerarCategoria() {
 
     const categoriaSelecionada = document.getElementById("categoria").value;
 
-    if (categoriaSelecionada == "terror") {
-        const categoriaHTML = `  
+    if (categoriaSelecionada == "Terror") {
+        const categoriaHTML = `
             <label>Terror:
             <select id="Filmesterror"></select>
             </label>
@@ -179,7 +179,7 @@ function gerarCategoria() {
             selectFilmesterror.appendChild(option);
         }
     }
-    if (categoriaSelecionada == "aventura") {
+    if (categoriaSelecionada == "Aventura") {
         const categoriaHTML = `  
             <label>Aventura:
             <select id="Filmesaventura"></select>
@@ -198,7 +198,7 @@ function gerarCategoria() {
             selectFilmesaventura.appendChild(option);
         }
     }
-    if (categoriaSelecionada == "romance") {
+    if (categoriaSelecionada == "Romance") {
         const categoriaHTML = `  
             <label>Romance:
             <select id="Filmesromance"></select>
@@ -217,7 +217,7 @@ function gerarCategoria() {
             selectFilmesromance.appendChild(option);
         }
     }
-    if (categoriaSelecionada == "comedia") {
+    if (categoriaSelecionada == "Comedia") {
         const categoriaHTML = `  
             <label>Comédia:
             <select id="Filmescomedia"></select>
@@ -235,7 +235,7 @@ function gerarCategoria() {
             selectFilmescomedia.appendChild(option);
         }
     }
-    if (categoriaSelecionada == "drama") {
+    if (categoriaSelecionada == "Drama") {
         const categoriaHTML = `  
             <label>Drama:
             <select id="Filmesdrama"></select>
@@ -253,7 +253,7 @@ function gerarCategoria() {
             selectFilmesdrama.appendChild(option);
         }
     }
-    if (categoriaSelecionada == "acao") {
+    if (categoriaSelecionada == "Acao") {
         const categoriaHTML = `  
             <label>Ação:
             <select id="Filmesacao"></select>
@@ -276,7 +276,7 @@ function gerarCategoria() {
 
 function gerarFilme() {
     const categoriaSelecionada = document.getElementById("categoria").value;
-    if (categoriaSelecionada == "terror") {
+    if (categoriaSelecionada == "Terror") {
         const filmeSelecionado = document.getElementById("Filmesterror").value;
         if (filmeSelecionado == "Terrifier") {
             const filmeHTML = `
@@ -297,7 +297,7 @@ function gerarFilme() {
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
-    if (categoriaSelecionada == "aventura") {
+    if (categoriaSelecionada == "Aventura") {
         const filmeSelecionado = document.getElementById("Filmesaventura").value;
         if (filmeSelecionado == "Jumanji") {
             const filmeHTML = `
@@ -318,7 +318,7 @@ function gerarFilme() {
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
-    if (categoriaSelecionada == "romance") {
+    if (categoriaSelecionada == "Romance") {
         const filmeSelecionado = document.getElementById("Filmesromance").value;
         if (filmeSelecionado == "Titanic") {
             const filmeHTML = `
@@ -339,7 +339,7 @@ function gerarFilme() {
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
-    if (categoriaSelecionada == "comedia") {
+    if (categoriaSelecionada == "Comedia") {
         const filmeSelecionado = document.getElementById("Filmescomedia").value;
         if (filmeSelecionado == "Um maluco no golf") {
             const filmeHTML = `
@@ -360,7 +360,7 @@ function gerarFilme() {
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
-    if (categoriaSelecionada == "drama") {
+    if (categoriaSelecionada == "Drama") {
         const filmeSelecionado = document.getElementById("Filmesdrama").value;
         if (filmeSelecionado == "Culpa das estrelas") {
             const filmeHTML = `
@@ -381,7 +381,7 @@ function gerarFilme() {
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
-    if (categoriaSelecionada == "acao") {
+    if (categoriaSelecionada == "Acao") {
         const filmeSelecionado = document.getElementById("Filmesacao").value;
         if (filmeSelecionado == "Formula 1") {
             const filmeHTML = `
@@ -429,17 +429,17 @@ function gerarRelatorio() {
     const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
     const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
 
-    if (categoria == "terror") {
+    if (categoria == "Terror") {
         filmeSelecionado = document.getElementById("Filmesterror").value;
-    } else if (categoria == "aventura") {
+    } else if (categoria == "Aventura") {
         filmeSelecionado = document.getElementById("Filmesaventura").value;
-    } else if (categoria == "romance") {
+    } else if (categoria == "Romance") {
         filmeSelecionado = document.getElementById("Filmesromance").value;
-    } else if (categoria == "comedia") {
+    } else if (categoria == "Comedia") {
         filmeSelecionado = document.getElementById("Filmescomedia").value;
-    } else if (categoria == "drama") {
+    } else if (categoria == "Drama") {
         filmeSelecionado = document.getElementById("Filmesdrama").value;
-    } else if (categoria == "acao") {
+    } else if (categoria == "Acao") {
         filmeSelecionado = document.getElementById("Filmesacao").value;
     }
     var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
