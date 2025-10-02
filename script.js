@@ -21,6 +21,7 @@ const numeros = [
 
 ]
 const categoria = [
+    { id: "Nenhum", nome: "Nenhum" },
     { id: "Terror", nome: "Terror👻" },
     { id: "Aventura", nome: "Aventura🗺️" },
     { id: "Romance", nome: "Romance❤️" },
@@ -429,18 +430,32 @@ function gerarRelatorio() {
     const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
     const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
 
+    let filmeSelecionado = "Nenhum filme selecionado";
+
     if (categoria == "Terror") {
-        filmeSelecionado = document.getElementById("Filmesterror").value;
+        if (document.getElementById("Filmesterror")) {
+            filmeSelecionado = document.getElementById("Filmesterror").value;
+        }
     } else if (categoria == "Aventura") {
-        filmeSelecionado = document.getElementById("Filmesaventura").value;
+        if (document.getElementById("Filmesaventura")) {
+            filmeSelecionado = document.getElementById("Filmesaventura").value;
+        }
     } else if (categoria == "Romance") {
-        filmeSelecionado = document.getElementById("Filmesromance").value;
+        if (document.getElementById("Filmesromance")) {
+            filmeSelecionado = document.getElementById("Filmesromance").value;
+        }
     } else if (categoria == "Comedia") {
-        filmeSelecionado = document.getElementById("Filmescomedia").value;
+        if (document.getElementById("Filmescomedia")) {
+            filmeSelecionado = document.getElementById("Filmescomedia").value;
+        }
     } else if (categoria == "Drama") {
-        filmeSelecionado = document.getElementById("Filmesdrama").value;
+        if (document.getElementById("Filmesdrama")) {
+            filmeSelecionado = document.getElementById("Filmesdrama").value;
+        }
     } else if (categoria == "Acao") {
-        filmeSelecionado = document.getElementById("Filmesacao").value;
+        if (document.getElementById("Filmesacao")) {
+            filmeSelecionado = document.getElementById("Filmesacao").value;
+        }
     }
     var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
     var comidaSelecionada = procurarPorId(comida, comidaId);
