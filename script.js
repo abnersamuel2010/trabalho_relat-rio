@@ -282,6 +282,7 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesterror").value;
         if (filmeSelecionado == "Terrifier") {
             const filmeHTML = `
+            <div class="" >
             <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
@@ -406,27 +407,6 @@ function gerarFilme() {
     }
 }
 
-function adicionarAssento() {
-
-    const letras = document.getElementById("letras").value;
-    const numeros = document.getElementById("numeros").value;
-    const relatorioDiv = document.getElementById("relatorio");
-
-
-    const assento = letras + numeros;
-
-    if ( assentosAtualizado.includes(assento) ){
-        alert(" Este assento já foi selecionado!");
-        return;
-    }
-    assentosAtualizado.push(assento);
-
-    
-
-    document.getElementById("letras").selectedIndex = 0;
-    document.getElementById("numeros").selectedIndex = 0;
-}
-
 preencherOpcoes();
 
 function procurarPorId(lista, idProcurado) {
@@ -447,7 +427,6 @@ function gerarRelatorio() {
     const comidaId = document.getElementById("comida").value;
     const bebidaId = document.getElementById("bebida").value;
     const comboId = document.getElementById("combo").value;
-    const assentosAtualizado = document.getElementById("assentosAtualizado").value;
     const quantidadeIngressos = parseInt(document.getElementById("quantidadeIngressos").value);
     const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
     const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
@@ -499,7 +478,7 @@ function gerarRelatorio() {
     <p><strong>Filme:</strong> ${filmeSelecionado}</p>
     <p><strong>Tipos de Ingressos:</strong> ${ingressosSelecionada.nome}</p>
     <p><strong>Quantidade de ingressos:</strong> ${quantidadeIngressos}</p>
-    <p><strong>Assento(s) Escolhido(s):</strong> ${assentos} ${assentosAtualizado} </p>
+    <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
     <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
     <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
     <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
