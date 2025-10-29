@@ -282,20 +282,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesterror").value;
         if (filmeSelecionado == "Terrifier") {
             const filmeHTML = `
-            <div class="" >
-            <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Hora do Pesadelo") {
             const filmeHTML = `
-            <img src="img/ahoradopesadelo.jpg" alt="horadopesadelo" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/ahoradopesadelo.jpg" alt="horadopesadelo" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Sextafeira 13") {
             const filmeHTML = `
-            <img src="img/sextafeira13.jpg" alt="sextafeira13" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/sextafeira13.jpg" alt="sextafeira13" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -304,19 +309,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesaventura").value;
         if (filmeSelecionado == "Jumanji") {
             const filmeHTML = `
-            <img src="img/jumanji.jpg" alt="jumanji" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/jumanji.jpg" alt="jumanji" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Vingadores") {
             const filmeHTML = `
-            <img src="img/vingadores.jpg" alt="vingadores" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/vingadores.jpg" alt="vingadores" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Velores e Furiosos") {
             const filmeHTML = `
-            <img src="img/velozesefuriosos.jpg" alt="velozesefuriosos" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/velozesefuriosos.jpg" alt="velozesefuriosos" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -325,19 +336,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesromance").value;
         if (filmeSelecionado == "Titanic") {
             const filmeHTML = `
-            <img src="img/titanic.jpg" alt="titanic" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/titanic.jpg" alt="titanic" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Como eu era antes de você") {
             const filmeHTML = `
-            <img src="img/comoeueraantesdevoce.jpg" alt="comoeueraantesdevoce" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/comoeueraantesdevoce.jpg" alt="comoeueraantesdevoce" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "10 coisas que eu odeio você") {
             const filmeHTML = `
-            <img src="img/10coisaodeio.jpg" alt="10coisaseueodio" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/10coisaodeio.jpg" alt="10coisaseueodio" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -346,19 +363,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmescomedia").value;
         if (filmeSelecionado == "Um maluco no golf") {
             const filmeHTML = `
-            <img src="img/malucogolf.jpg" alt="ummaluconogolf" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/malucogolf.jpg" alt="ummaluconogolf" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "De repente trinta") {
             const filmeHTML = `
-            <img src="img/derepentetrinta.jpg" alt="derepentetinta" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/derepentetrinta.jpg" alt="derepentetinta" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Gente grande") {
             const filmeHTML = `
-            <img src="img/gentegrande.jpg" alt="gentegande" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/gentegrande.jpg" alt="gentegande" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -367,19 +390,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesdrama").value;
         if (filmeSelecionado == "Culpa das estrelas") {
             const filmeHTML = `
-            <img src="img/culpadasestrelas.jpg" alt="culpadasestrelas" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/culpadasestrelas.jpg" alt="culpadasestrelas" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Show de truman") {
             const filmeHTML = `
-            <img src="img/truman.jpg" alt="showdetruman" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/truman.jpg" alt="showdetruman" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Interestelar") {
             const filmeHTML = `
-            <img src="img/interestelar.jpg" alt="interestelar" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/interestelar.jpg" alt="interestelar" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -388,19 +417,25 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesacao").value;
         if (filmeSelecionado == "Formula 1") {
             const filmeHTML = `
-            <img src="img/formula1.jpg" alt="formula1" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/formula1.jpg" alt="formula1" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Quarteto Fantástico") {
             const filmeHTML = `
-            <img src="img/quartetofantastico.jpg" alt="quartetofantastico" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/quartetofantastico.jpg" alt="quartetofantastico" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Superman") {
             const filmeHTML = `
-            <img src="img/superman.jpg" alt="superman" class="tamanhoFilme">
+            <div class="sinopseFilme">
+                <img src="img/superman.jpg" alt="superman" class="tamanhoFilme">
+            </div>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }

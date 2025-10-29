@@ -1,3 +1,9 @@
+.informacaoFilme {
+
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid black ;
+}
 #icon{
 
     font-size: 50px;
