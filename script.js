@@ -18,7 +18,6 @@ const numeros = [
     { id: "7", nome: "7" },
     { id: "8", nome: "8" },
     { id: "9", nome: "9" },
-
 ]
 const categoria = [
     { id: "Nenhum", nome: "Nenhum" },
@@ -39,7 +38,7 @@ const Filmesterror = [
 const Filmesaventura = [
     { id: "Jumanji", nome: "Jumanji" },
     { id: "Vingadores", nome: "Vingadores" },
-    { id: "Velores e Furiosos", nome: "Velores e Furiosos" },
+    { id: "Velozes e Furiosos", nome: "Velozes e Furiosos" },
 ]
 
 const Filmesromance = [
@@ -66,38 +65,30 @@ const Filmesacao = [
 ]
 const comida = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
-    { id: "cb", nome: "Cachorro Quente🌭 - 15R$", preco: 15 },
-    { id: "pp", nome: "Pipoca Pequena🍿 - 10R$", preco: 10 },
-    { id: "pm", nome: "Pipoca Média🍿 - 20R$", preco: 20 },
-    { id: "pg", nome: "Pipoca Grande🍿 - 30R$", preco: 30 },
-    { id: "pgg", nome: "Pipoca Gigante🍿 - 40R$", preco: 40 },
-]
-const adicionais = [
-    { id: "nenhum", nome: "Nenhum", preco: 0 },
-    { id: "fn", nome: "Fini - 8R$ - 90g", preco: 8 },
-    { id: "pc", nome: "Chocolate - 15R$", preco: 15 },
-    { id: "pd", nome: "Caramelo - 15R$", preco: 15 },
-    { id: "pa", nome: "Amor - 20R$", preco: 20 },
+    { id: "cb", nome: "Cachorro Quente🌭 - 14,99R$", preco: 14.99 },
+    { id: "pp", nome: "Pipoca Pequena🍿 - 9,99R$", preco: 9.99 },
+    { id: "pm", nome: "Pipoca Média🍿 - 19,99R$", preco: 19.99 },
+    { id: "pg", nome: "Pipoca Grande🍿 - 29,99R$", preco: 29.99 },
+    { id: "pgg", nome: "Pipoca Gigante🍿 - 39,99R$", preco: 39.99 },
 ]
 const bebida = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
-    { id: "cc", nome: "Coca-Cola🥤 - 12R$", preco: 12 },
-    { id: "pp", nome: "Pepsi🥤 - 12R$", preco: 12 },
-    { id: "gr", nome: "Guaraná🥤 - 12R$", preco: 12 },
+    { id: "cc", nome: "Coca-Cola🥤 - 11,99R$", preco: 11.99 },
+    { id: "pp", nome: "Pepsi🥤 - 11,99R$", preco: 11.99 },
+    { id: "gr", nome: "Guaraná🥤 - 11,99R$", preco: 11.99 },
 ]
 
 const combo = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
-    { id: "Combo Classic", nome: "Pipoca Grande(salgada) + Refrigerante(350ml) - 40R$", preco: 40 },
-    { id: "Combo classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 60R$", preco: 60 },
-    { id: "Combo Classic Prime", nome: "Pipoca Grande(salgada ou doce) + Balde/Copo personalizado(Copo Refil) - 80R$", preco: 80 },
-    { id: "Combo Classic Supremo ", nome: "Balde Grande personalizado(Refil) (salgada ou doce) + Copo Personalizado - 120R$ ", preco: 120 },
+    { id: "Combo Classic", nome: "Pipoca Grande(salgada) + Refrigerante(350ml) - 49,99R$", preco: 49.99 },
+    { id: "Combo classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 69,99R$", preco: 69.99 },
+    { id: "Combo Classic Prime", nome: "Pipoca Grande(salgada ou doce) + Balde/Copo personalizado(Copo Refil) - 99,99R$", preco: 99.99 },
+    { id: "Combo Classic Supremo ", nome: "Balde Gigante personalizado(Refil) (salgada ou doce) + Copo Personalizado - 119,99R$ ", preco: 119.99 },
 ]
 const ingressos = [
-    { id: "inteira", nome: "Inteira", preco: 25 },
-    { id: "meia", nome: "Meia-Entrada", preco: 12 },
+    { id: "inteira", nome: "Inteira", preco: 24.99 },
+    { id: "meia", nome: "Meia-Entrada", preco: 11.99 },
 ]
-const assentosSelecionados = []
 
 function preencherOpcoes() {//é chamada na linha 407
     const selectingressos = document.getElementById("ingressos");
@@ -164,12 +155,12 @@ function gerarCategoria() {
 
     if (categoriaSelecionada == "Terror") {
         const categoriaHTML = `
-            <label>Terror:
-            <select id="Filmesterror"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+<label>Terror:
+<select id="Filmesterror"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
-        `;
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesterror = document.getElementById("Filmesterror");
@@ -182,13 +173,13 @@ function gerarCategoria() {
         }
     }
     if (categoriaSelecionada == "Aventura") {
-        const categoriaHTML = `  
-            <label>Aventura:
-            <select id="Filmesaventura"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+        const categoriaHTML = `
+<label>Aventura:
+<select id="Filmesaventura"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
-        `;
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesaventura = document.getElementById("Filmesaventura");
@@ -201,13 +192,13 @@ function gerarCategoria() {
         }
     }
     if (categoriaSelecionada == "Romance") {
-        const categoriaHTML = `  
-            <label>Romance:
-            <select id="Filmesromance"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-            
-        `;
+        const categoriaHTML = `
+<label>Romance:
+<select id="Filmesromance"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesromance = document.getElementById("Filmesromance");
@@ -220,12 +211,12 @@ function gerarCategoria() {
         }
     }
     if (categoriaSelecionada == "Comedia") {
-        const categoriaHTML = `  
-            <label>Comédia:
-            <select id="Filmescomedia"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-        `;
+        const categoriaHTML = `
+<label>Comédia:
+<select id="Filmescomedia"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmescomedia = document.getElementById("Filmescomedia");
@@ -238,12 +229,12 @@ function gerarCategoria() {
         }
     }
     if (categoriaSelecionada == "Drama") {
-        const categoriaHTML = `  
-            <label>Drama:
-            <select id="Filmesdrama"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-        `;
+        const categoriaHTML = `
+<label>Drama:
+<select id="Filmesdrama"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesdrama = document.getElementById("Filmesdrama");
@@ -256,12 +247,12 @@ function gerarCategoria() {
         }
     }
     if (categoriaSelecionada == "Acao") {
-        const categoriaHTML = `  
-            <label>Ação:
-            <select id="Filmesacao"></select>
-            </label>
-            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-        `;
+        const categoriaHTML = `
+<label>Ação:
+<select id="Filmesacao"></select>
+</label>
+<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+`;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesacao = document.getElementById("Filmesacao");
@@ -282,26 +273,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesterror").value;
         if (filmeSelecionado == "Terrifier") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Hora do Pesadelo") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/ahoradopesadelo.jpg" alt="horadopesadelo" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/ahoradopesadelo.jpg" alt="horadopesadelo" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Sextafeira 13") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/sextafeira13.jpg" alt="sextafeira13" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/sextafeira13.jpg" alt="sextafeira13" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -309,26 +294,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesaventura").value;
         if (filmeSelecionado == "Jumanji") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/jumanji.jpg" alt="jumanji" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/jumanji.jpg" alt="jumanji" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Vingadores") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/vingadores.jpg" alt="vingadores" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/vingadores.jpg" alt="vingadores" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
-        if (filmeSelecionado == "Velores e Furiosos") {
+        if (filmeSelecionado == "Velozes e Furiosos") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/velozesefuriosos.jpg" alt="velozesefuriosos" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/velozesefuriosos.jpg" alt="velozesefuriosos" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -336,26 +315,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesromance").value;
         if (filmeSelecionado == "Titanic") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/titanic.jpg" alt="titanic" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/titanic.jpg" alt="titanic" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Como eu era antes de você") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/comoeueraantesdevoce.jpg" alt="comoeueraantesdevoce" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/comoeueraantesdevoce.jpg" alt="comoeueraantesdevoce" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "10 coisas que eu odeio você") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/10coisaodeio.jpg" alt="10coisaseueodio" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/10coisaodeio.jpg" alt="10coisaseueodio" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -363,26 +336,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmescomedia").value;
         if (filmeSelecionado == "Um maluco no golf") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/malucogolf.jpg" alt="ummaluconogolf" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/malucogolf.jpg" alt="ummaluconogolf" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "De repente trinta") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/derepentetrinta.jpg" alt="derepentetinta" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/derepentetrinta.jpg" alt="derepentetinta" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Gente grande") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/gentegrande.jpg" alt="gentegande" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/gentegrande.jpg" alt="gentegande" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -390,26 +357,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesdrama").value;
         if (filmeSelecionado == "Culpa das estrelas") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/culpadasestrelas.jpg" alt="culpadasestrelas" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/culpadasestrelas.jpg" alt="culpadasestrelas" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Show de truman") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/truman.jpg" alt="showdetruman" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/truman.jpg" alt="showdetruman" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Interestelar") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/interestelar.jpg" alt="interestelar" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/interestelar.jpg" alt="interestelar" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -417,26 +378,20 @@ function gerarFilme() {
         const filmeSelecionado = document.getElementById("Filmesacao").value;
         if (filmeSelecionado == "Formula 1") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/formula1.jpg" alt="formula1" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/formula1.jpg" alt="formula1" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Quarteto Fantástico") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/quartetofantastico.jpg" alt="quartetofantastico" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/quartetofantastico.jpg" alt="quartetofantastico" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
         if (filmeSelecionado == "Superman") {
             const filmeHTML = `
-            <div class="sinopseFilme">
-                <img src="img/superman.jpg" alt="superman" class="tamanhoFilme">
-            </div>
-            `;
+<img src="img/superman.jpg" alt="superman" class="tamanhoFilme">
+`;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
     }
@@ -467,7 +422,7 @@ function gerarRelatorio() {
     const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
     const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
 
-    let filmeSelecionado = "Nenhum filme selecionado";
+    let filmeSelecionado = "Nenhum";
 
     if (categoria == "Terror") {
         if (document.getElementById("Filmesterror")) {
@@ -508,17 +463,18 @@ function gerarRelatorio() {
 
 
     const relatorioHTML = `
-    <h2>Relatório</h2>
-    <p><strong>Categoria:</strong> ${categoria}</p>
-    <p><strong>Filme:</strong> ${filmeSelecionado}</p>
-    <p><strong>Tipos de Ingressos:</strong> ${ingressosSelecionada.nome}</p>
-    <p><strong>Quantidade de ingressos:</strong> ${quantidadeIngressos}</p>
-    <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
-    <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
-    <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
-    <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
-    <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
-    <p><strong>Obrigado por comprar conosco!</strong></p>
-    `;
+<h2>Relatório</h2>
+<p><strong>Categoria:</strong> ${categoria}</p>
+<p><strong>Filme:</strong> ${filmeSelecionado}</p>
+<p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.nome}</p>
+<p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
+<p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
+<p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
+<p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
+<p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
+<p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
+<p><strong>Obrigado por comprar conosco!</strong></p>
+`;
     document.getElementById("relatorio").innerHTML = relatorioHTML;
+    document.getElementById("relatorio").style.fontSize = "20px";
 }

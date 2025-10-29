@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassicCine</title>
-    <link id="icon" rel="icon" href="img/logo.png">
+    <link rel="icon" href="img/logo.ico">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -22,13 +22,14 @@
 
         <h1 class="bv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
 
-        <h2>Quantidade de Ingressos</h2>
+        <h2>Quantidade de ingresso:</h2>
 
         <label for="ingressos">Escolha seu(s) Ingresso(s):</label>
         <select name="Ingressos" id="ingressos"></select>
 
         <label for="quantidadeIngressos">Quantidade:</label>
-        <input type="number" id="quantidadeIngressos" min="0" max="96" value="0">
+        <input type="number" id="quantidadeIngressos" min="1" max="96" value="1">
+        <h6>(Inteira:24,99 - Meia;12,99)</h6>
 
         <h2>Selecione sua categoria:</h2>
 
@@ -42,7 +43,7 @@
         <div id="mostrarfilme"></div>
 
 
-        <h3>Escolha sua comida:</h3>
+        <h3>Escolha sua(s) comida(s):</h3>
 
         <label for="comida">Comida:</label>
         <select id="comida"></select>
@@ -51,7 +52,7 @@
         <input type="number" id="quantidadeComida" min="0" max="10" value="0">
         <br><br>
 
-        <h3>Escolha sua bebida:</h3>
+        <h3>Escolha sua(s) bebida(s):</h3>
 
         <label for="bebida">Bebida:</label>
         <select id="bebida"></select>
@@ -60,14 +61,17 @@
         <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
         <br><br>
 
-        <h3>Escolha seu combo:</h3>
+        <h3>Escolha seu(s) combo(s):</h3>
 
-        <label for="combo">Comida:</label>
+        <label for="combo">Combo:</label>
         <select id="combo"></select>
 
         <label for="quantidadeCombo">Quantidade:</label>
         <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
+
         <br><br>
+
+        <h3>Escolha seu(s) assento(s):</h3>
 
         <img class="assentos" src="img/assentos.png" alt="mapa">
 
@@ -80,19 +84,30 @@
 
         <br><br>
 
-        <button type="button" onclick="gerarRelatorio()">Atualizar Relatório</button>
+        <button type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
         <br>
 
         <div id="relatorio"></div>
 
         <br>
         <button onclick="window.print()">Gerar PDF do Relatório</button>
+        <br>
+        <script src="script.js"></script>
     </main>
-    <footer>
-
-    </footer>
-
-    <script src="script.js"></script>
 </body>
+<br>
+<footer>
+    <a href="https://www.youtube.com/@xap%C3%A9uyt">
+    <img class="YouTube" src="img/youtube.png" alt="YouTube" >
+    </a>
+    <a href="https://github.com/abnersamuel2010">
+        <img class="GitHub" src="img/GitHub.png" alt="GitHub">
+    </a>
+    <a href="https://pt.wikipedia.org/wiki/Nigger">
+    <img class="wikipedia" src="img/wikipedia.png" alt="wikipedia">
+    </a>
+</footer>
+
+<script src="script.js"></script>
 
 </html>

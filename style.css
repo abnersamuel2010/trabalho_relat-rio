@@ -1,22 +1,16 @@
-.informacaoFilme {
-
-    width: 420px;
-    background-color: transparent;
-    border: 2px solid black ;
-}
-#icon{
-
+#icon {
     font-size: 50px;
     width: 50px;
     height: 50px;
 }
 
-.paragrafoFilme{
+.paragrafoFilme {
     text-align: center;
     width: 300px;
     height: 150px;
 
 }
+
 .tamanhoFilme {
     width: 150px;
 }
@@ -29,6 +23,18 @@
 
 .assentos {
     width: 600px;
+}
+
+.YouTube {
+    width: 100px;
+}
+
+.GitHub {
+    width: 70px;
+}
+
+.wikipedia {
+    width: 70px;
 }
 
 @media print {
@@ -50,24 +56,63 @@
     }
 }
 
-
-
-
 main {
-    height: 2000px;
+    height: 4000px;
     text-align: center;
     align-items: center;
     color: white;
     background-color: black;
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
     border: 0;
+    font-size: xx-large;
 }
-body{
-    height: 2000px;
+
+body {
+    height: 4000px;
     text-align: center;
     align-items: center;
     color: white;
     background-color: black;
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
     border: 0;
+    font-size: xx-large;
+}
+
+footer {
+    text-align: left;
+    align-items: left;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select {
+    font-size: 18px;
+    padding: 12px;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+
+}
+
+input[type="number"] {
+    font-size: 18px;
+    padding: 12px;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+form {
+    margin: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 24px;
 }
