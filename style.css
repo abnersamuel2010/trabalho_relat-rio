@@ -1,16 +1,23 @@
-#icon {
+.sinopseFilme {
+
+    width: 430px;
+    background-color: transparent;
+    border: 2px solid rgb(207, 205, 205) ;
+    background-position: center;
+}
+#icon{
+
     font-size: 50px;
     width: 50px;
     height: 50px;
 }
 
-.paragrafoFilme {
+.paragrafoFilme{
     text-align: center;
     width: 300px;
     height: 150px;
 
 }
-
 .tamanhoFilme {
     width: 150px;
 }
@@ -33,10 +40,6 @@
     width: 70px;
 }
 
-.wikipedia {
-    width: 70px;
-}
-
 @media print {
     body * {
         visibility: hidden;
@@ -55,30 +58,30 @@
         width: 100%;
     }
 }
+header {
+    height: 300px;
+    background-color: black;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: sticky;
+}
 
-main {
-    height: 4000px;
+body{
+    height: 2700px;
+    justify-content: center;
     text-align: center;
     align-items: center;
+    background-position: center;
     color: white;
     background-color: black;
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
     border: 0;
-    font-size: xx-large;
 }
-
-body {
-    height: 4000px;
-    text-align: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
-    font-size: xx-large;
-}
-
 footer {
+    height: 200px;
+    color: white;
+    background-color: rgb(24, 23, 23);
     text-align: left;
     align-items: left;
 }
@@ -93,7 +96,7 @@ label {
 select {
     font-size: 18px;
     padding: 12px;
-    width: 50%;
+    width: 30%;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid #ccc;
@@ -107,11 +110,6 @@ input[type="number"] {
     border-radius: 5px;
     border: 2px solid #ccc;
 }
-
-form {
-    margin: 20px 0;
-}
-
 button {
     font-size: 20px;
     padding: 12px 24px;
