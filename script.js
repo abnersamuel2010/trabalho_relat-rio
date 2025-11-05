@@ -90,7 +90,7 @@ const ingressos = [
     { id: "meia", nome: "Meia-Entrada - 11,99R$", preco: 11.99 },
 ]
 
-function preencherOpcoes() {//é chamada na linha 407
+function preencherOpcoes() {//é chamada na linha 473
     const selectingressos = document.getElementById("ingressos");
     for (let i = 0; i < ingressos.length; i++) {//repete o que esta dentro dos parenteses ate o final da lista
         const item = ingressos[i];
@@ -274,11 +274,11 @@ function gerarFilme() {
         if (filmeSelecionado == "Terrifier") {
             const filmeHTML = `
             <img src="img/terrifier.jpg" alt="terrifier" class="tamanhoFilme">
-            <center>
-            <div class="sinopseFilme">
-                <p>Enquanto cuida de duas crianças no halloween, uma babá encontra uma antiga fita VHS no saco de doces. O filme apresenta três contos de terror, todos ligados entre si por um palhaço assassino. Ao longo da noite, coisas estranhas começam a acontecer na casa e a presença do palhaço parece cada vez mais real.</p>
+            <div class="blocoFilme">
+                <div class="sinopseFilme">
+                    <p>Enquanto cuida de duas crianças no halloween, uma babá encontra uma antiga fita VHS no saco de doces. O filme apresenta três contos de terror, todos ligados entre si por um palhaço assassino. Ao longo da noite, coisas estranhas começam a acontecer na casa e a presença do palhaço parece cada vez mais real.</p>
+                </div>
             </div>
-            </center>
             `;
             document.getElementById("mostrarfilme").innerHTML = filmeHTML;
         }
@@ -492,7 +492,7 @@ preencherOpcoes();
 
 function procurarPorId(lista, idProcurado) {
     for (let i = 0; i < lista.length; i++) {
-        if (lista[i].id === idProcurado) {
+        if (lista[i].id = idProcurado) {
             return lista[i];
         }
     }
@@ -565,6 +565,7 @@ function gerarRelatorio() {
 <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
 <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
 <p><strong>Obrigado por comprar conosco!</strong></p>
+
 `;
     document.getElementById("relatorio").innerHTML = relatorioHTML;
     document.getElementById("relatorio").style.fontSize = "20px";
