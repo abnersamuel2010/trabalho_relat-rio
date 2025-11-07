@@ -155,10 +155,10 @@ function gerarCategoria() {
 
     if (categoriaSelecionada == "Terror") {
         const categoriaHTML = `
-<label>Terror:
-<select id="Filmesterror"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Terror:
+            <select id="Filmesterror"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -174,10 +174,10 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Aventura") {
         const categoriaHTML = `
-<label>Aventura:
-<select id="Filmesaventura"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Aventura:
+            <select id="Filmesaventura"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -193,10 +193,10 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Romance") {
         const categoriaHTML = `
-<label>Romance:
-<select id="Filmesromance"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Romance:
+            <select id="Filmesromance"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
@@ -212,10 +212,10 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Comedia") {
         const categoriaHTML = `
-<label>Comédia:
-<select id="Filmescomedia"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Comédia:
+            <select id="Filmescomedia"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
@@ -230,10 +230,10 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Drama") {
         const categoriaHTML = `
-<label>Drama:
-<select id="Filmesdrama"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Drama:
+            <select id="Filmesdrama"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
@@ -248,10 +248,10 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Acao") {
         const categoriaHTML = `
-<label>Ação:
-<select id="Filmesacao"></select>
-</label>
-<button type="button" onclick="gerarFilme()">Enviar</button><br><br>
+            <label>Ação:
+            <select id="Filmesacao"></select>
+            </label>
+            <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
 `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 

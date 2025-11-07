@@ -3,7 +3,7 @@
     width: 430px;
     background-color: transparent;
     border: 2px solid rgb(207, 205, 205);
-    background-position: center;
+    margin: auto;
 }
 
 #icon {
@@ -109,7 +109,7 @@ select {
     padding: 12px;
     width: 30%;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 500px;
     border: 2px solid #ccc;
 
 }
@@ -118,7 +118,7 @@ input[type="number"] {
     font-size: 18px;
     padding: 12px;
     width: 30%;
-    border-radius: 5px;
+    border-radius: 500px;
     border: 2px solid #ccc;
 }
 
@@ -129,10 +129,5 @@ form {
 button {
     font-size: 20px;
     padding: 12px 24px;
-}
-
-.bloco_footer {
-    display: grid;
-    grid-template-columns: repeat(4, 0.1fr);
-    padding: 3rem 3.5rem;
+    border-radius: 500px;
 }
