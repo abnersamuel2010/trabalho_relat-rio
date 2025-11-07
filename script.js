@@ -492,7 +492,7 @@ preencherOpcoes();
 
 function procurarPorId(lista, idProcurado) {
     for (let i = 0; i < lista.length; i++) {
-        if (lista[i].id = idProcurado) {
+        if (lista[i].id === idProcurado) {
             return lista[i];
         }
     }
@@ -568,5 +568,4 @@ function gerarRelatorio() {
 
 `;
     document.getElementById("relatorio").innerHTML = relatorioHTML;
-    document.getElementById("relatorio").style.fontSize = "20px";
 }
