@@ -554,17 +554,18 @@ function gerarRelatorio() {
 
 
     const relatorioHTML = `
-<h2>Relatório</h2>
-<p><strong>Categoria:</strong> ${categoria}</p>
-<p><strong>Filme:</strong> ${filmeSelecionado}</p>
-<p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.id}</p>
-<p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
-<p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
-<p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
-<p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
-<p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
-<p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
-<p><strong>Obrigado por comprar conosco!</strong></p>
+    
+        <h2>Relatório</h2>
+        <p><strong>Categoria:</strong> ${categoria}</p>
+        <p><strong>Filme:</strong> ${filmeSelecionado}</p>
+        <p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.id}</p>
+        <p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
+        <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
+        <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
+        <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
+        <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
+        <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
+        <p><strong>Obrigado por comprar conosco!</strong></p>
 
 `;
     document.getElementById("relatorio").innerHTML = relatorioHTML;
