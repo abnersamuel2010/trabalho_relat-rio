@@ -1,0 +1,17 @@
+body {
+    height: 4700px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-size: xx-large;
+}
+.logo {
+    width: 450px;
+
+}

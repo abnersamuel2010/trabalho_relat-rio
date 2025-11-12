@@ -1,3 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    height: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rgb(46, 45, 45);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+main{
+    height: auto;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-size: xx-large;
+
+}
+footer {
+    text-align: left;
+    align-items: left;
+}
 .sinopseFilme {
 
     width: 430px;
@@ -66,36 +101,7 @@
 }
 
 
-main {
-    height: 4700px;
-    text-align: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
-    padding: 0;
-    margin: 0;
-    font-size: xx-large;
-}
 
-body {
-    height: 4700px;
-    text-align: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
-    padding: 0;
-    margin: 0;
-    font-size: xx-large;
-}
-
-footer {
-    text-align: left;
-    align-items: left;
-}
 
 label {
     font-size: 20px;
@@ -121,11 +127,6 @@ input[type="number"] {
     border-radius: 500px;
     border: 2px solid #ccc;
 }
-
-form {
-    margin: 20px 0;
-}
-
 button {
     font-size: 20px;
     padding: 12px 24px;
