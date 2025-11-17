@@ -1,17 +1,87 @@
-body {
-    height: 4700px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
+*{
     padding: 0;
     margin: 0;
-    font-size: xx-large;
+    box-sizing: border-box;
 }
-.logo {
-    width: 450px;
+.linha_header{
+    max-width: 1200px;
+    margin: 0 auto;
 
 }
+/* header */
+header{
+    height: 100%;
+    padding: 40px 0;
+    background-color: #12100D;
+}
+header .linha_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+header .menu nav ul{
+    list-style-type: none;
+}
+header .menu nav ul li {
+    display: inline-block;
+    margin: 0 100px;
+}
+/* header */
+a {
+    text-decoration: none;
+    color: white;
+}
+main{
+    text-align: center;
+    align-items: center;
+}
+body{
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    color: white;
+    background-color: black;
+    font-size: xx-large;
+}
+
+#icon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+select {
+    font-size: 18px;
+    padding: 12px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 500px;
+    border: 2px solid #ccc;
+
+}
+
+
+/* definição das imagens */
+.logo{
+    width: 150px;
+
+}
+.login{
+    width: 80px;
+}
+.YouTube {
+    width: 97px;
+}
+
+.GitHub {
+    width: 160px;
+}
+
+.LinkedIn {
+    width: 100px;
+}
+/* definição das imagens */
+
+

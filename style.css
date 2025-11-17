@@ -1,38 +1,53 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+.linha_header{
+    max-width: 1200px;
+    margin: 0 auto;
 
-body{
-    background-color: white;
-    height: 0;
-    border: 0;
-    padding: 0;
-    margin: 0;
 }
+/* header */
 header{
-    background-color: rgb(46, 45, 45);
-    margin: 0;
-    padding: 0;
-    border: 0;
+    height: 100%;
+    padding: 40px 0;
+    background-color: #12100D;
+}
+header .linha_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+header .menu nav ul{
+    list-style-type: none;
+}
+header .menu nav ul li {
+    display: inline-block;
+    margin: 0 100px;
+}
+/* header */
+a {
+    text-decoration: none;
+    color: white;
 }
 main{
-    height: auto;
     text-align: center;
     align-items: center;
-    color: white;
-    background-color: black;
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
-    border: 0;
+}
+body{
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
     padding: 0;
     margin: 0;
+    height: auto;
+    color: white;
+    background-color: black;
     font-size: xx-large;
+}
 
-}
-footer {
-    text-align: left;
-    align-items: left;
-}
+/* definição dos filmes */
+
 .sinopseFilme {
 
     width: 430px;
@@ -41,11 +56,7 @@ footer {
     margin: auto;
 }
 
-#icon {
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
-}
+
 
 .paragrafoFilme {
     text-align: center;
@@ -58,28 +69,15 @@ footer {
 .tamanhoFilme {
     width: 150px;
 }
+/* definição dos filmes */
 
 
-.logo {
-    width: 450px;
-
+#icon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
 }
 
-.assentos {
-    width: 600px;
-}
-
-.YouTube {
-    width: 97px;
-}
-
-.GitHub {
-    width: 160px;
-}
-
-.LinkedIn {
-    width: 100px;
-}
 
 @media print {
     body * {
@@ -132,3 +130,25 @@ button {
     padding: 12px 24px;
     border-radius: 500px;
 }
+/* definição das imagens */
+.logo{
+    width: 150px;
+
+}
+.login{
+    width: 80px;
+}
+.YouTube {
+    width: 97px;
+}
+
+.GitHub {
+    width: 160px;
+}
+
+.LinkedIn {
+    width: 100px;
+}
+/* definição das imagens */
+
+
