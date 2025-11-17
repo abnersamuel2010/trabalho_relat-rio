@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .linha_header{
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
 
 }
@@ -28,10 +28,7 @@ header .menu nav ul li {
     margin: 0 100px;
 }
 /* header */
-a {
-    text-decoration: none;
-    color: white;
-}
+
 main{
     text-align: center;
     align-items: center;
@@ -44,6 +41,12 @@ body{
     color: white;
     background-color: black;
     font-size: xx-large;
+}
+
+.interface_main{
+
+    height: 100%;
+    padding: 80px 0;
 }
 
 /* definição dos filmes */
@@ -71,12 +74,12 @@ body{
 }
 /* definição dos filmes */
 
-
-#icon {
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
+a {
+    text-decoration: none;
+    color: white;
 }
+
+
 
 
 @media print {
@@ -136,7 +139,7 @@ button {
 
 }
 .login{
-    width: 80px;
+    width: 90px;
 }
 .YouTube {
     width: 97px;
@@ -148,6 +151,11 @@ button {
 
 .LinkedIn {
     width: 100px;
+}
+#icon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
 }
 /* definição das imagens */
 
