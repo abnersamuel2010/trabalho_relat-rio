@@ -10,22 +10,9 @@
 }
 /* header */
 header{
-    height: 100%;
+    height: 210px;
     padding: 40px 0;
     background-color: #12100D;
-}
-header .linha_header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-}
-header .menu nav ul{
-    list-style-type: none;
-}
-header .menu nav ul li {
-    display: inline-block;
-    margin: 0 90px;
 }
 /* header */
 a {
@@ -37,12 +24,14 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 1000px;
 }
 body{
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
     padding: 0;
     margin: 0;
-    height: auto;
+    height: 1600px;
+    background-size: cover;
     color: white;
     font-size: xx-large;
 }
