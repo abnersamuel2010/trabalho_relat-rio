@@ -1,71 +1,48 @@
-*{
-    padding: 0;
+body {
     margin: 0;
-    box-sizing: border-box;
-}
-.linha_header{
-    max-width: 1200px;
-    margin: 0 auto;
-
-}
-/* header */
-header{
-    height: 210px;
-    padding: 40px 0;
-    background-color: #12100D;
-}
-/* header */
-a {
-    text-decoration: none;
-    color: white;
-}
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 1000px;
-}
-body{
-    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
-    padding: 0;
-    margin: 0;
-    height: 1600px;
+    background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    text-align: center;
     color: white;
-    font-size: xx-large;
-}
-footer .bloco_footer {
-    display: flex;
-    justify-content: center;
-    margin: 0 100px;
-    padding: 30px 0;
-}
-#icon {
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
 }
 
-/* definição das imagens */
-.logo{
-    width: 150px;
-
-}
-.login{
-    width: 80px;
-}
-.YouTube {
-    width: 97px;
+.logo {
+    width: 300px;
 }
 
-.GitHub {
-    width: 160px;
+header {
+    font-size: x-large;
 }
 
-.LinkedIn {
-    width: 100px;
+input[type ="text"] {
+    font-size: 18px;
+    padding: 12px;
+    width: 30%;
+    border-radius: 500px;
+    border: 2px solid #ccc;
 }
-/* definição das imagens */
 
+input[type ="date"] {
+    font-size: 18px;
+    padding: 12px;
+    width: 30%;
+    border-radius: 500px;
+    border: 2px solid #ccc;
+}
 
+button {
+    font-size: 20px;
+    padding: 12px;
+    width: 32.5%;
+    border-radius: 500px;
+    border: 2px solid #ccc;
+}
+
+.bloco_cadastro {
+    background: black;
+    border: 2px solid white;
+    padding: 5%;
+    
+}
