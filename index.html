@@ -23,16 +23,6 @@
             <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
         </div>
 
-        <div class="menu">
-          <nav>
-            <ul>
-              <li><a href="#">início</a></li>
-              <li><a href="#">filmes</a></li>
-              <li><a href="#">comidas</a></li>
-            </ul>
-          </nav>
-        </div>
-
         <div class="login">
           <a href="login.html"><img class="login" src="img/login.png" alt="login"></a>
         </div>
@@ -42,19 +32,17 @@
   </header>
   <main>
     <div class="interface_main" >
-      <h1 class="bv">𝔹𝕖𝕞 𝕧𝕚𝕟𝕕𝕠 𝕒𝕠 ℂ𝕝𝕒𝕤𝕤𝕚𝕔ℂ𝕚𝕟𝕖</h1>
 
-      <h2>Quantidade de Ingressos</h2>
+      <h2>Ingressos</h2>
 
-      <label for="ingressos">Escolha seu(s) Ingresso(s):</label>
+      <label for="ingressos">Ingresso(s):</label>
       <select name="Ingressos" id="ingressos"></select>
 
       <label for="quantidadeIngressos">Quantidade:</label>
       <input type="number" id="quantidadeIngressos" min="0" max="96" value="0">
 
-      <h2>Selecione sua categoria:</h2>
+      <h2>Categoria:</h2>
 
-      <label>Categoria:</label>
       <select id="categoria"></select>
 
       <button type="button" onclick="gerarCategoria()">Enviar</button><br><br>
@@ -64,16 +52,15 @@
       <div id="mostrarfilme"></div>
 
 
-      <h3>Escolha sua comida:</h3>
+      <h3>Comida:</h3>
 
-      <label for="comida">Comida:</label>
       <select id="comida"></select>
 
       <label for="quantidadeComida">Quantidade:</label>
       <input type="number" id="quantidadeComida" min="0" max="10" value="0">
       <br><br>
 
-      <h3>Escolha sua bebida:</h3>
+      <h3>Bebida:</h3>
 
       <label for="bebida">Bebida:</label>
       <select id="bebida"></select>
@@ -82,54 +69,43 @@
       <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
       <br><br>
 
-      <h3>Escolha seu combo:</h3>
+      <h3>Combos:</h3>
 
-      <label for="combo">Combo:</label>
       <select id="combo"></select>
 
       <label for="quantidadeCombo">Quantidade:</label>
       <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
       <br><br>
 
-      <img class="assentos" src="img/assentos.png" alt="mapa">
+      <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
 
-      <br><br>
 
-      <select id="letras"></select>
+      <div class="assento_bloco">
+        <select id="letras"></select>
+        <select id="numeros"></select>
+      </div>
 
-      <select id="numeros"></select>
+      <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
 
-      <button type="button" onclick="adicionarAssento()">Adicionar</button>
+    <h3>Carrinho:</h2>
+    
+    <div class="carrinho_bloco">
 
-      <br><br>
+      <div class="carrinho"></div><br><br>
+      <button type="button" onclick="carrinho()">Atualizar</button>
 
-      <button type="button" onclick="gerarRelatorio()">Atualizar Relatório</button>
-      <br>
+    </div>
+    <button type="button" onclick="gerarRelatorio()">Relatório</button>
+    <br>
 
-      <div id="relatorio"></div>
+    <div id="relatorio"></div>
 
-      <br>
-      <button onclick="window.print()">Gerar PDF do Relatório</button>
-      <br>
+    <br>
+    <button onclick="window.print()">Gerar PDF do Relatório</button>
+    <br>
     </div>
   </main>
   
-
-<footer>
-  <div class="bloco_footer">
-
-    <a href="https://www.youtube.com/@xap%C3%A9uyt">
-      <img class="YouTube" src="img/youtube.png" alt="YouTube">
-    </a>
-
-    <a href="https://github.com/abnersamuel2010">
-      <img class="GitHub" src="img/GitHub.png" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/abner-tomaz-467061391/">
-      <img class="LinkedIn" src="img/linkedin.png" alt="LinkedIn">
-    </a>
-  </div>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
