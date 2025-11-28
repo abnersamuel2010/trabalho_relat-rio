@@ -278,33 +278,6 @@ function adicionarAssento() {
     }
 }
 
-function carrinho() {
-    const categoria = document.getElementById("categoria").value;
-    const ingressosId = document.getElementById("ingressos").value;
-    const comidaId = document.getElementById("comida").value;
-    const bebidaId = document.getElementById("bebida").value;
-    const comboId = document.getElementById("combo").value;
-    const quantidadeIngressos = parseInt(document.getElementById("quantidadeIngressos").value);
-    const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
-    const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
-    const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
-
-    const carrinhoHTML = `
-
-        <p><strong>Categoria:</strong> ${categoria}</p>
-        <p><strong>Filme:</strong> ${filmeSelecionado}</p>
-        <p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.id}</p>
-        <p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
-        <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
-        <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
-        <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
-        <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
-        <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
-    `;
-    document.getElementById("relatorio").innerHTML = relatorioHTML;
-
-}
-
 preencherOpcoes();
 
 function procurarPorId(lista, idProcurado) {
@@ -316,7 +289,7 @@ function procurarPorId(lista, idProcurado) {
     return null;
 }
 
-function gerarRelatorio() {
+function gerarCarrinho() {
 
     const categoria = document.getElementById("categoria").value;
     const ingressosId = document.getElementById("ingressos").value;
@@ -368,10 +341,8 @@ function gerarRelatorio() {
     const assentos = assentosSelecionados.join(", ");
 
 
-    const relatorioHTML = `
-    
-        <h2>Relatório</h2>
-        <p><strong>Categoria:</strong> ${categoria}</p>
+    const carrinhoHTML = `
+            <p><strong>Categoria:</strong> ${categoria}</p>
         <p><strong>Filme:</strong> ${filmeSelecionado}</p>
         <p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.id}</p>
         <p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
@@ -381,5 +352,5 @@ function gerarRelatorio() {
         <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
         <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
 `;
-    document.getElementById("relatorio").innerHTML = relatorioHTML;
+    document.getElementById("carrinho").innerHTML = carrinhoHTML;
 }

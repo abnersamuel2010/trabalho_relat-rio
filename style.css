@@ -29,10 +29,7 @@ header .menu nav ul li {
 }
 /* header */
 
-main{
-    text-align: center;
-    align-items: center;
-}
+
 body{
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
     padding: 0;
@@ -48,31 +45,9 @@ body{
     height: 100%;
     padding: 80px 0;
 }
-
-/* definição dos filmes */
-
-.sinopseFilme {
-
-    width: 430px;
-    background-color: transparent;
-    border: 2px solid rgb(207, 205, 205);
-    margin: auto;
-}
-
-
-
-.paragrafoFilme {
+.centro {
     text-align: center;
-    align-items: center;
-    width: 300px;
-    height: 150px;
-
 }
-
-.tamanhoFilme {
-    width: 150px;
-}
-/* definição dos filmes */
 
 @media print {
     body * {
@@ -114,11 +89,14 @@ select {
     border: 2px solid #ccc;
 
 }
-
+.assento_numeros{
+    width: 14%;
+    border-radius: 500px
+}
 input[type="number"] {
     font-size: 18px;
-    padding: 12px;
-    width: 30%;
+    padding: 13px;
+    width: 4%;
     border-radius: 500px;
     border: 2px solid #ccc;
 }
@@ -150,6 +128,13 @@ button {
     font-size: 50px;
     width: 50px;
     height: 50px;
+}
+.parana {
+width: 140px;
+}
+
+.escola {
+width: 200px;
 }
 /* definição das imagens */
 
