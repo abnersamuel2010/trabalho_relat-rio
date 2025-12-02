@@ -9,7 +9,7 @@
   <!--/ Google fontes  /-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClassicCine</title>
+  <title>testeClassicCine</title>
   <link id="icon" rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="style.css">
 
@@ -33,63 +33,77 @@
   <main>
     <div class="interface_main" >
       <div class="centro">
+
+        <div class="ingressos_bloco">
         <h2>Ingressos</h2>
+          <select name="Ingressos" id="ingressos"></select>
+          <input type="number" id="quantidadeIngressos" min="0" max="10" value="0">
+          <button type="button" onclick="adicionarIngresso()">Adicionar</button>
+        </div>
 
-        <select name="Ingressos" id="ingressos"></select>
-        <input type="number" id="quantidadeIngressos" min="0" max="10" value="0">
-
+        <div class="horarios_bloco">
         <h2>Horários</h2>
+          <select name="Horarios" id="horario"></select>
+          <button type="button" onclick="adicionarHorario()">Adicionar</button>
+        </div>
+        
+        <div class="filmes_bloco">
+          <h2>Categoria:</h2>
+            <select id="categoria"></select>
+            <button type="button" onclick="gerarCategoria()">Enviar</button><br><br>
+          <div id="mostrarcategoria"></div>
+        </div>
 
-        <select name="Horarios" id="horario"></select>
-
-        <h2>Categoria:</h2>
-
-        <select id="categoria"></select>
-
-        <button type="button" onclick="gerarCategoria()">Enviar</button><br><br>
-
-        <div id="mostrarcategoria"></div>
-
-        <div id="mostrarfilme"></div>
-
-
+        <div class="comida_bloco">
         <h3>Comida:</h3>
+          <select id="comida"></select>
+          <input type="number" id="quantidadeComida" min="0" max="10" value="0">
+          <button type="button" onclick="adicionarComida()">Adicionar</button>
+          <br><br>
+        </div>
 
-        <select id="comida"></select>
-
-        <input type="number" id="quantidadeComida" min="0" max="10" value="0">
-        <br><br>
-
+        <div class="bebida_bloco">
         <h3>Bebida:</h3>
+          <select id="bebida"></select>
+          <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
+          <button type="button" onclick="adicionarBebida()">Adicionar</button>
+          <br><br>
+        </div>
 
-        <label for="bebida">Bebida:</label>
-        <select id="bebida"></select>
-
-        <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
-        <br><br>
-
+        <div class="combo_bloco">
         <h3>Combos:</h3>
-
-        <select id="combo"></select>
-
-        <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
-        <br><br>
+          <select id="combo"></select>
+          <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
+          <button type="button" onclick="adicionarCombo()">Adicionar</button>
+          <br><br>
+        </div>
 
         <div class="assentos_bloco">
           
           <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
-
-          <div class="centro">
-            <div class="assento_numeros">
+            <div class="assento_numeros"><br>
               <select id="letras"></select>
-              <select id="numeros"></select>
-              <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
+              <select id="numeros"></select> 
             </div>
-          </div>
+              <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
+           
+        </div>
+        
+          <h3>Ingressos:</h3>
+          <div id="ingressoMostrar"></div><br>
+          <h3>Horários:</h3>
+          <div id="horarioMotrar"></div><br>
+          <h3>Comida:</h3>
+          <div id="comidaMostrar"></div><br>
+          <h3>Bebida:</h3>
+          <div id="bebidaMostrar"></div><br>
+          <h3>Combos:</h3>
+          <div id="comboMostrar"></div><br>
+          <h3>Assentos Selecionados:</h3>
+          <div id="assentoMostrar"></div><br>
 
-        <div id="carrinho"></div><br>
-        <button type="button" onclick="gerarCarrinho()">Relatório</button><br>
-
+          <button type="button" onclick="total()">Total</button><br><br>
+          <div id="total"></div>
 
         <button onclick="window.print()">Gerar PDF do Relatório</button>
         <br>

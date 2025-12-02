@@ -276,6 +276,14 @@ function adicionarAssento() {
     if (!assentosSelecionados.includes(assento)) {
         assentosSelecionados.push(assento);
     }
+    // Exibe os assentos selecionados em tempo real
+    const mostragemAssentos = document.getElementById("assentoMostrar");
+    if (mostragemAssentos) {
+        mostragemAssentos.textContent = assentosSelecionados.join(", ") || "Nenhum";
+    }
+}
+function adicionarIngresso{
+    const ingressos = document.getElementById("ingressos")
 }
 
 preencherOpcoes();
