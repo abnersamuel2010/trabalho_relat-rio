@@ -37,9 +37,7 @@ body{
     height: auto;
     color: white;
     background-color: black;
-    font-size: xx-large;
-    text-align: center;
-    
+    font-size: xx-large;    
 }
 
 .interface_main{
@@ -47,14 +45,20 @@ body{
     height: 100%;
     padding: 80px 0;
 }
+/* definições */
 .centro {
     text-align: center;
 
 }
-.assentos_bloco{
-    text-align: center;
-}    
-
+.esquerda {
+    text-align: left;
+    padding: 50px;
+}
+.direita {
+    text-align: right;
+    padding: 50px;
+}
+/* definições */
 @media print {
     body * {
         visibility: hidden;
@@ -73,15 +77,6 @@ body{
         width: 100%;
     }
 }
-
-
-
-#assentosSelecionadosMostrados {
-    margin-top: 8px;
-    color: #ddd;
-    font-size: 18px;
-}
-
 label {
     font-size: 20px;
     font-weight: bold;
@@ -114,13 +109,35 @@ button {
     padding: 12px 24px;
     border-radius: 500px;
 }
+#letras{
+    font-size: 18px;
+    padding: 12px;
+    width: 4%;
+    border-radius: 500px;
+    border: 2px solid #ccc;
+}
+#numeros{
+    font-size: 18px;
+    padding: 12px;
+    width: 4%;
+    border-radius: 500px;
+    border: 2px solid #ccc;
+}
+.carrinho{
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 /* definição das imagens */
 .logo{
-    width: 150px;
+    width: 200px;
 
 }
 .login{
-    width: 90px;
+    width: 140px;
+}
+.assentos{
+    width: 450px;
 }
 /* Removed unused social sizing styles */
 #icon {

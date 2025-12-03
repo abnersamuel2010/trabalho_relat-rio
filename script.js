@@ -1,4 +1,16 @@
 const assentosSelecionados = [];
+const ingressosSelecionados = [];
+const horariosSelecionados = [];
+const comidaSelecionados = [];
+const bebidaSelecionados = [];
+const comboSelecionados = [];
+let filmeSelecionado = "Nenhum";
+
+let totalIngressos = 0;
+let totalComidas = 0;
+let totalBebidas = 0;
+let totalCombos = 0;
+
 const letras = [
     { id: "A", nome: "A" },
     { id: "B", nome: "B" },
@@ -19,6 +31,13 @@ const numeros = [
     { id: "7", nome: "7" },
     { id: "8", nome: "8" },
     { id: "9", nome: "9" },
+]
+const horario = [
+    { id: "11:00", nome: "11:00" },
+    { id: "13:30", nome: "13:30" },
+    { id: "16:00", nome: "16:00" },
+    { id: "18:30", nome: "18:30" },
+    { id: "21:00", nome: "21:00" },
 ]
 const categoria = [
     { id: "Nenhum", nome: "Nenhum" },
@@ -66,34 +85,34 @@ const Filmesacao = [
 ]
 const comida = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
-    { id: "cb", nome: "Cachorro Quente🌭 - 14,99R$", preco: 14.99 },
-    { id: "pp", nome: "Pipoca Pequena🍿 - 9,99R$", preco: 9.99 },
-    { id: "pm", nome: "Pipoca Média🍿 - 19,99R$", preco: 19.99 },
-    { id: "pg", nome: "Pipoca Grande🍿 - 29,99R$", preco: 29.99 },
-    { id: "pgg", nome: "Pipoca Gigante🍿 - 39,99R$", preco: 39.99 },
+    { id: "Cachorro Quente", nome: "Cachorro Quente🌭 - 14,99R$", preco: 14.99 },
+    { id: "Pipoca Pequena", nome: "Pipoca Pequena🍿 - 9,99R$", preco: 9.99 },
+    { id: "Pipoca Média", nome: "Pipoca Média🍿 - 19,99R$", preco: 19.99 },
+    { id: "Pipoca Grande", nome: "Pipoca Grande🍿 - 29,99R$", preco: 29.99 },
+    { id: "Pipoca Gigante", nome: "Pipoca Gigante🍿 - 39,99R$", preco: 39.99 },
 ]
 const bebida = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
-    { id: "cc", nome: "Coca-Cola🥤 - 11,99R$", preco: 11.99 },
-    { id: "pp", nome: "Pepsi🥤 - 11,99R$", preco: 11.99 },
-    { id: "gr", nome: "Guaraná🥤 - 11,99R$", preco: 11.99 },
+    { id: "Coca-Cola", nome: "Coca-Cola🥤 - 11,99R$", preco: 11.99 },
+    { id: "Pepsi", nome: "Pepsi🥤 - 11,99R$", preco: 11.99 },
+    { id: "Guaraná", nome: "Guaraná🥤 - 11,99R$", preco: 11.99 },
 ]
 
 const combo = [
     { id: "nenhuma", nome: "Nenhuma", preco: 0 },
     { id: "Combo Classic", nome: "Pipoca Grande(salgada) + Refrigerante(350ml) - 49,99R$", preco: 49.99 },
-    { id: "Combo classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 69,99R$", preco: 69.99 },
+    { id: "Combo Classic Duo", nome: "Pipoca Gigante(salgada ou doce) + Refil + 2 Refrigerante - 69,99R$", preco: 69.99 },
     { id: "Combo Classic Prime", nome: "Pipoca Grande(salgada ou doce) + Balde/Copo personalizado(Copo Refil) - 99,99R$", preco: 99.99 },
     { id: "Combo Classic Supremo ", nome: "Balde Gigante personalizado(Refil) (salgada ou doce) + Copo Personalizado - 119,99R$ ", preco: 119.99 },
 ]
 const ingressos = [
-    { id: "inteira", nome: "Inteira - 24,99R$", preco: 24.99 },
-    { id: "meia", nome: "Meia-Entrada - 11,99R$", preco: 11.99 },
+    { id: "Inteira", nome: "Inteira - 24,99R$", preco: 24.99 },
+    { id: "Meia", nome: "Meia-Entrada - 11,99R$", preco: 11.99 },
 ]
 
-function preencherOpcoes() {//é chamada na linha 473
+function preencherOpcoes() {
     const selectingressos = document.getElementById("ingressos");
-    for (let i = 0; i < ingressos.length; i++) {//repete o que esta dentro dos parenteses ate o final da lista
+    for (let i = 0; i < ingressos.length; i++) {
         const item = ingressos[i];
         const option = document.createElement("option");
         option.value = item.id;
@@ -124,6 +143,14 @@ function preencherOpcoes() {//é chamada na linha 473
         option.textContent = item.nome;
         selectcategoria.appendChild(option);
     }
+    const selecthorario = document.getElementById("horario");
+    for (let i = 0; i < horario.length; i++) {
+        const item = horario[i];
+        const option = document.createElement("option");
+        option.value = item.id;
+        option.textContent = item.nome;
+        selecthorario.appendChild(option);
+    }
     const selectcomida = document.getElementById("comida");
     for (let i = 0; i < comida.length; i++) {
         const item = comida[i];
@@ -151,17 +178,14 @@ function preencherOpcoes() {//é chamada na linha 473
 }
 
 function gerarCategoria() {
-
     const categoriaSelecionada = document.getElementById("categoria").value;
+    const categoriaId = document.getElementById("categoria").value;
 
     if (categoriaSelecionada == "Terror") {
         const categoriaHTML = `
-            <label>
             <select id="Filmesterror"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesterror = document.getElementById("Filmesterror");
@@ -175,12 +199,9 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Aventura") {
         const categoriaHTML = `
-            <label>
             <select id="Filmesaventura"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesaventura = document.getElementById("Filmesaventura");
@@ -194,12 +215,9 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Romance") {
         const categoriaHTML = `
-            <label>
             <select id="Filmesromance"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesromance = document.getElementById("Filmesromance");
@@ -213,11 +231,9 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Comedia") {
         const categoriaHTML = `
-            <label>
             <select id="Filmescomedia"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmescomedia = document.getElementById("Filmescomedia");
@@ -231,11 +247,9 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Drama") {
         const categoriaHTML = `
-            <label>
             <select id="Filmesdrama"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesdrama = document.getElementById("Filmesdrama");
@@ -249,24 +263,25 @@ function gerarCategoria() {
     }
     if (categoriaSelecionada == "Acao") {
         const categoriaHTML = `
-            <label>
             <select id="Filmesacao"></select>
-            </label>
             <button type="button" onclick="gerarFilme()">Enviar</button><br><br>
-`;
+        `;
         document.getElementById("mostrarcategoria").innerHTML = categoriaHTML;
 
         const selectFilmesacao = document.getElementById("Filmesacao");
         for (let i = 0; i < Filmesacao.length; i++) {
             const item = Filmesacao[i];
+
             const option = document.createElement("option");
             option.value = item.id;
             option.textContent = item.nome;
             selectFilmesacao.appendChild(option);
         }
     }
-}
 
+    const categoriaHTML = ` ${categoriaId} `;
+    document.getElementById("categoriaMostrar").innerHTML = categoriaHTML;
+}
 
 function adicionarAssento() {
     const letra = document.getElementById("letras").value;
@@ -276,14 +291,132 @@ function adicionarAssento() {
     if (!assentosSelecionados.includes(assento)) {
         assentosSelecionados.push(assento);
     }
-    // Exibe os assentos selecionados em tempo real
     const mostragemAssentos = document.getElementById("assentoMostrar");
     if (mostragemAssentos) {
         mostragemAssentos.textContent = assentosSelecionados.join(", ") || "Nenhum";
     }
 }
-function adicionarIngresso{
-    const ingressos = document.getElementById("ingressos")
+
+function adicionarIngresso() {
+    const ingressoId = document.getElementById("ingressos").value;
+    const quantidadeIngressos = parseInt(document.getElementById("quantidadeIngressos").value);
+
+    if (quantidadeIngressos > 0){
+        var ingressoObj = procurarPorId(ingressos, ingressoId);
+        if (!ingressoObj) {
+            alert("Erro: ingresso não encontrado.");
+            return;
+        }
+
+        const nomeIngresso = ingressoObj.id;
+        const ingressoComQtd = nomeIngresso + " (" + quantidadeIngressos + ")";
+
+        if (!ingressosSelecionados.includes(ingressoComQtd)) {
+            ingressosSelecionados.push(ingressoComQtd);
+        }
+
+        totalIngressos += ingressoObj.preco * quantidadeIngressos;
+
+        const mostragemIngresso = document.getElementById("ingressoMostrar");
+        if (mostragemIngresso) {
+            mostragemIngresso.textContent = ingressosSelecionados.join(", ") || "Nenhum";
+        }
+    } else {
+        alert("Por favor, insira uma quantidade válida de ingressos.");
+    }
+}
+
+function adicionarHorario() {
+    const horarioId = document.getElementById("horario").value;
+    const horarioHTML = ` ${horarioId} `;
+    document.getElementById("horarioMostrar").innerHTML = horarioHTML;
+}
+
+function adicionarBebida() {
+    const bebidaId = document.getElementById("bebida").value;
+    const quantidadeBebidas = parseInt(document.getElementById("quantidadeBebida").value);
+
+    if (quantidadeBebidas > 0){
+        var bebidaObj = procurarPorId(bebida, bebidaId);
+        if (!bebidaObj) {
+            alert("Erro: bebida não encontrada.");
+            return;
+        }
+
+        const nomeBebida = bebidaObj.id;
+        const bebidaComQtd = nomeBebida + " (" + quantidadeBebidas + ")";
+
+        if (!bebidaSelecionados.includes(bebidaComQtd)) {
+            bebidaSelecionados.push(bebidaComQtd);
+        }
+
+        totalBebidas += bebidaObj.preco * quantidadeBebidas;
+
+        const mostragemBebida = document.getElementById("bebidaMostrar");
+        if (mostragemBebida) {
+            mostragemBebida.textContent = bebidaSelecionados.join(", ") || "Nenhum";
+        }
+    } else {
+        alert("Por favor, insira uma quantidade válida de bebidas.");
+    }
+}
+
+function adicionarCombo() {
+    const comboId = document.getElementById("combo").value;
+    const quantidadeCombos = parseInt(document.getElementById("quantidadeCombo").value);
+
+    if (quantidadeCombos > 0){
+        var comboObj = procurarPorId(combo, comboId);
+        if (!comboObj) {
+            alert("Erro: combo não encontrado.");
+            return;
+        }
+
+        const nomeCombo = comboObj.id;
+        const comboComQtd = nomeCombo + " (" + quantidadeCombos + ")";
+
+        if (!comboSelecionados.includes(comboComQtd)) {
+            comboSelecionados.push(comboComQtd);
+        }
+
+        totalCombos += comboObj.preco * quantidadeCombos;
+
+        const mostragemCombo = document.getElementById("comboMostrar");
+        if (mostragemCombo) {
+            mostragemCombo.textContent = comboSelecionados.join(", ") || "Nenhum";
+        }
+    } else {
+        alert("Por favor, insira uma quantidade válida de combos.");
+    }
+}
+
+function adicionarComida() {
+    const comidaId = document.getElementById("comida").value;
+    const quantidadeComidas = parseInt(document.getElementById("quantidadeComida").value);
+
+    if (quantidadeComidas > 0){
+        var comidaObj = procurarPorId(comida, comidaId);
+        if (!comidaObj) {
+            alert("Erro: comida não encontrada.");
+            return;
+        }
+
+        const nomeComida = comidaObj.id;
+        const comidaComQtd = nomeComida + " (" + quantidadeComidas + ")";
+
+        if (!comidaSelecionados.includes(comidaComQtd)) {
+            comidaSelecionados.push(comidaComQtd);
+        }
+
+        totalComidas += comidaObj.preco * quantidadeComidas;
+
+        const mostragemComida = document.getElementById("comidaMostrar");
+        if (mostragemComida) {
+            mostragemComida.textContent = comidaSelecionados.join(", ") || "Nenhum";
+        }
+    } else {
+        alert("Por favor, insira uma quantidade válida de comidas.");
+    }
 }
 
 preencherOpcoes();
@@ -296,69 +429,31 @@ function procurarPorId(lista, idProcurado) {
     }
     return null;
 }
+function gerarFilme() {
+    const categoriaId = document.getElementById("categoria").value;
+    let selecionado = "Nenhum";
 
-function gerarCarrinho() {
-
-    const categoria = document.getElementById("categoria").value;
-    const ingressosId = document.getElementById("ingressos").value;
-    const comidaId = document.getElementById("comida").value;
-    const bebidaId = document.getElementById("bebida").value;
-    const comboId = document.getElementById("combo").value;
-    const quantidadeIngressos = parseInt(document.getElementById("quantidadeIngressos").value);
-    const quantidadeComida = parseInt(document.getElementById("quantidadeComida").value);
-    const quantidadeBebida = parseInt(document.getElementById("quantidadeBebida").value);
-    const quantidadeCombo = parseInt(document.getElementById("quantidadeCombo").value);
-
-    let filmeSelecionado = "Nenhum";
-
-    if (categoria == "Terror") {
-        if (document.getElementById("Filmesterror")) {
-            filmeSelecionado = document.getElementById("Filmesterror").value;
-        }
-    } else if (categoria == "Aventura") {
-        if (document.getElementById("Filmesaventura")) {
-            filmeSelecionado = document.getElementById("Filmesaventura").value;
-        }
-    } else if (categoria == "Romance") {
-        if (document.getElementById("Filmesromance")) {
-            filmeSelecionado = document.getElementById("Filmesromance").value;
-        }
-    } else if (categoria == "Comedia") {
-        if (document.getElementById("Filmescomedia")) {
-            filmeSelecionado = document.getElementById("Filmescomedia").value;
-        }
-    } else if (categoria == "Drama") {
-        if (document.getElementById("Filmesdrama")) {
-            filmeSelecionado = document.getElementById("Filmesdrama").value;
-        }
-    } else if (categoria == "Acao") {
-        if (document.getElementById("Filmesacao")) {
-            filmeSelecionado = document.getElementById("Filmesacao").value;
-        }
+    if (categoriaId === "Terror" && document.getElementById("Filmesterror")) {
+        selecionado = document.getElementById("Filmesterror").value;
+    } else if (categoriaId === "Aventura" && document.getElementById("Filmesaventura")) {
+        selecionado = document.getElementById("Filmesaventura").value;
+    } else if (categoriaId === "Romance" && document.getElementById("Filmesromance")) {
+        selecionado = document.getElementById("Filmesromance").value;
+    } else if (categoriaId === "Comedia" && document.getElementById("Filmescomedia")) {
+        selecionado = document.getElementById("Filmescomedia").value;
+    } else if (categoriaId === "Drama" && document.getElementById("Filmesdrama")) {
+        selecionado = document.getElementById("Filmesdrama").value;
+    } else if (categoriaId === "Acao" && document.getElementById("Filmesacao")) {
+        selecionado = document.getElementById("Filmesacao").value;
     }
-    var ingressosSelecionada = procurarPorId(ingressos, ingressosId);
-    var comidaSelecionada = procurarPorId(comida, comidaId);
-    var bebidaSelecionada = procurarPorId(bebida, bebidaId);
-    var comboSelecionado = procurarPorId(combo, comboId);
 
-    const valorIngresso = ingressosSelecionada.preco * quantidadeIngressos
-    const valorComida = comidaSelecionada.preco * quantidadeComida;
-    const valorBebida = bebidaSelecionada.preco * quantidadeBebida;
-    const valorCombo = comboSelecionado.preco * quantidadeCombo;
-    const total = valorIngresso + valorComida + valorBebida + valorCombo;
-    const assentos = assentosSelecionados.join(", ");
+    filmeSelecionado = selecionado || "Nenhum";
+    document.getElementById("filmeMostrar").textContent = filmeSelecionado;
+    document.getElementById("categoriaMostrar").textContent = categoriaId || "Nenhum";
+}
 
-
-    const carrinhoHTML = `
-            <p><strong>Categoria:</strong> ${categoria}</p>
-        <p><strong>Filme:</strong> ${filmeSelecionado}</p>
-        <p><strong>Tipo(s) de Ingresso(s):</strong> ${ingressosSelecionada.id}</p>
-        <p><strong>Quantidade de ingresso(s):</strong> ${quantidadeIngressos}</p>
-        <p><strong>Assento(s) Escolhido(s):</strong> ${assentos}</p>
-        <p><strong>Comida:</strong> ${comidaSelecionada.nome} (${quantidadeComida})</p>
-        <p><strong>Bebida:</strong> ${bebidaSelecionada.nome} (${quantidadeBebida})</p>
-        <p><strong>Combo:</strong> ${comboSelecionado.nome} (${quantidadeCombo})</p>
-        <p><strong>Total a pagar:</strong> R$ ${total.toFixed(2)}</p>
-`;
-    document.getElementById("carrinho").innerHTML = carrinhoHTML;
+function total() {
+    let totalFinal = totalIngressos + totalComidas + totalBebidas + totalCombos;
+    document.getElementById("totalMostrar").textContent =
+        "Total: R$ " + totalFinal.toFixed(2).replace(".", ",");
 }

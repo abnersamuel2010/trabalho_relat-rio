@@ -9,7 +9,7 @@
   <!--/ Google fontes  /-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>testeClassicCine</title>
+  <title>ClassicCine</title>
   <link id="icon" rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="style.css">
 
@@ -35,7 +35,7 @@
       <div class="centro">
 
         <div class="ingressos_bloco">
-        <h2>Ingressos</h2>
+        <h2>Ingresso</h2>
           <select name="Ingressos" id="ingressos"></select>
           <input type="number" id="quantidadeIngressos" min="0" max="10" value="0">
           <button type="button" onclick="adicionarIngresso()">Adicionar</button>
@@ -43,14 +43,14 @@
 
         <div class="horarios_bloco">
         <h2>Horários</h2>
-          <select name="Horarios" id="horario"></select>
+          <select id="horario"></select>
           <button type="button" onclick="adicionarHorario()">Adicionar</button>
         </div>
         
         <div class="filmes_bloco">
           <h2>Categoria:</h2>
             <select id="categoria"></select>
-            <button type="button" onclick="gerarCategoria()">Enviar</button><br><br>
+            <button type="button" onclick="gerarCategoria()">Adicionar</button><br><br>
           <div id="mostrarcategoria"></div>
         </div>
 
@@ -83,16 +83,21 @@
           <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
             <div class="assento_numeros"><br>
               <select id="letras"></select>
-              <select id="numeros"></select> 
-            </div>
+              <select id="numeros"></select>
               <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
-           
+            </div>
         </div>
-        
-          <h3>Ingressos:</h3>
+
+        <div class="carrinho"><br>
+          
+          <h3> Tipo Ingressos:</h3>
           <div id="ingressoMostrar"></div><br>
           <h3>Horários:</h3>
-          <div id="horarioMotrar"></div><br>
+          <div id="horarioMostrar"></div><br>
+          <h3>Categoria:</h3>
+          <div id="categoriaMostrar"></div><br>
+          <h3>Filme:</h3>
+          <div id="filmeMostrar"></div><br>
           <h3>Comida:</h3>
           <div id="comidaMostrar"></div><br>
           <h3>Bebida:</h3>
@@ -103,7 +108,9 @@
           <div id="assentoMostrar"></div><br>
 
           <button type="button" onclick="total()">Total</button><br><br>
-          <div id="total"></div>
+          <div id="totalMostrar"></div>
+
+        </div><br>
 
         <button onclick="window.print()">Gerar PDF do Relatório</button>
         <br>
