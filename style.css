@@ -29,13 +29,14 @@ header .menu nav ul li {
 }
 /* header */
 
-
+h2 {
+    color: black;
+}
 body{
     background-image: linear-gradient(rgb(120, 4, 4), rgb(37, 1, 1)); ;
-    padding: 0;
+    padding: 8px;
     margin: 0;
     height: auto;
-    color: white;
     background-color: black;
     font-size: xx-large;    
 }
@@ -57,6 +58,30 @@ body{
 .direita {
     text-align: right;
     padding: 50px;
+}
+.ingressos_bloco{
+    padding: 0;
+    margin: 0;
+    width: 550px;
+    height: auto    ;
+    background-color: #282828;
+    border: 4px solid rgb(5, 5, 5);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px ;
+    text-align: center;
+}
+.horarios_bloco{
+    padding: 0;
+    margin: 0;
+    width: 550px;
+    height: auto    ;
+    background-color: #282828;
+    border: 4px solid rgb(5, 5, 5);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px ;
+    text-align: center;
 }
 /* definições */
 @media print {
@@ -87,7 +112,7 @@ label {
 select {
     font-size: 18px;
     padding: 12px;
-    width: 30%;
+    width: 60%;
     margin-bottom: 20px;
     border-radius: 500px;
     border: 2px solid #ccc;
@@ -100,7 +125,7 @@ select {
 input[type="number"] {
     font-size: 18px;
     padding: 13px;
-    width: 4%;
+    width: 15%;
     border-radius: 500px;
     border: 2px solid #ccc;
 }

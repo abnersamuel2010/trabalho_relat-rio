@@ -32,61 +32,65 @@
   </header>
   <main>
     <div class="interface_main" >
-      <div class="centro">
-        <div class="naoAparece">
-        <div class="ingressos_bloco">
-        <h2>Ingresso</h2>
-          <select name="Ingressos" id="ingressos"></select>
-          <input type="number" id="quantidadeIngressos" min="0" max="10" value="0">
-          <button type="button" onclick="adicionarIngresso()">Adicionar</button>
-        </div>
-
-        <div class="horarios_bloco">
-        <h2>Horários</h2>
-          <select id="horario"></select>
-          <button type="button" onclick="adicionarHorario()">Adicionar</button>
-        </div>
-        
-        <div class="filmes_bloco">
-          <h2>Categoria:</h2>
-            <select id="categoria"></select>
-            <button type="button" onclick="gerarCategoria()">Adicionar</button><br><br>
-          <div id="mostrarcategoria"></div>
-        </div>
-
-        <div class="comida_bloco">
-        <h3>Comida:</h3>
-          <select id="comida"></select>
-          <input type="number" id="quantidadeComida" min="0" max="10" value="0">
-          <button type="button" onclick="adicionarComida()">Adicionar</button>
-          <br><br>
-        </div>
-
-        <div class="bebida_bloco">
-        <h3>Bebida:</h3>
-          <select id="bebida"></select>
-          <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
-          <button type="button" onclick="adicionarBebida()">Adicionar</button>
-          <br><br>
-        </div>
-
-        <div class="combo_bloco">
-        <h3>Combos:</h3>
-          <select id="combo"></select>
-          <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
-          <button type="button" onclick="adicionarCombo()">Adicionar</button>
-          <br><br>
-        </div>
-
-        <div class="assentos_bloco">
-          
-          <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
-            <div class="assento_numeros"><br>
-              <select id="letras"></select>
-              <select id="numeros"></select>
-              <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
+      <div class="naoAparece">
+          <div class="esquerda"></div>
+            <div class="ingressos_bloco">
+            <h2>Ingresso</h2>
+              <select name="Ingressos" id="ingressos"></select>
+              <input type="number" id="quantidadeIngressos" min="0" max="10" value="0"><br>
+              <button type="button" onclick="adicionarIngresso()">Adicionar</button>
             </div>
-        </div>
+
+            <div class="horarios_bloco">
+            <h2>Horários</h2>
+              <select id="horario"></select><br>
+              <button type="button" onclick="adicionarHorario()">Adicionar</button>
+            </div>
+            
+            <div class="filmes_bloco">
+              <h2>Categoria:</h2>
+                <select id="categoria"></select><br>
+                <button type="button" onclick="gerarCategoria()">Adicionar</button><br><br>
+              <div id="mostrarcategoria"></div>
+            </div>
+            </div>
+          </div>
+
+        <div class="centro"><br>
+            <div class="comida_bloco">
+            <h3>Comida:</h3>
+              <select id="comida"></select>
+              <input type="number" id="quantidadeComida" min="0" max="10" value="0">
+              <button type="button" onclick="adicionarComida()">Adicionar</button>
+              <br><br>
+            </div>
+
+            <div class="bebida_bloco">
+            <h3>Bebida:</h3>
+              <select id="bebida"></select>
+              <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
+              <button type="button" onclick="adicionarBebida()">Adicionar</button>
+              <br><br>
+            </div>
+
+            <div class="combo_bloco">
+            <h3>Combos:</h3>
+              <select id="combo"></select>
+              <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
+              <button type="button" onclick="adicionarCombo()">Adicionar</button>
+              <br><br>
+            </div>
+          </div>
+          
+          <div class="assentos_bloco">
+            
+            <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
+              <div class="assento_numeros"><br>
+                <select id="letras"></select>
+                <select id="numeros"></select>
+                <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
+              </div>
+          </div>
         </div>
         <div class="carrinho"><br>
           
@@ -114,7 +118,6 @@
 
         <button onclick="window.print()">Gerar PDF do Relatório</button>
         <br>
-      </div>
     </div>
   </main>
   <footer>
