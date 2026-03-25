@@ -1,133 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <!-- Google fontes -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <!--/ Google fontes  /-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClassicCine</title>
-  <link id="icon" rel="icon" href="img/logo.png">
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Kero</title>
+    <link rel="stylesheet" href="style.css">
+    <link id="icon" rel="icon" href="img/kero_icon.png">
 </head>
-
 <body>
-  <header>
-      <div class="linha_header">
-
-          <div class="logo_bloco">
-            <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+    <header>
+        <div class="imagem_logo">
+            <img src="img/logo.png" class="logo" alt="">
         </div>
-
-        <div class="login">
-          <a href="login.html"><img class="login" src="img/login.png" alt="login"></a>
+    </header>
+    <aside>
+        
+    </aside>
+    <main>
+        <div class="letra">
+            
         </div>
+        <div class="mae">
 
-      </div>
-
-  </header>
-  <main>
-    <div class="interface_main" >
-      <div class="naoAparece">
-          <div class="esquerda"></div>
-            <div class="ingressos_bloco">
-            <h2>Ingresso</h2>
-              <select name="Ingressos" id="ingressos"></select>
-              <input type="number" id="quantidadeIngressos" min="0" max="10" value="0"><br>
-              <button type="button" onclick="adicionarIngresso()">Adicionar</button>
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="produto.html">Saiba Mais</a></p>
             </div>
 
-            <div class="horarios_bloco">
-            <h2>Horários</h2>
-              <select id="horario"></select><br>
-              <button type="button" onclick="adicionarHorario()">Adicionar</button>
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
+            </div>
+
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
+            </div>
+
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
+            </div>
+
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
+            </div>
+
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
             </div>
             
-            <div class="filmes_bloco">
-              <h2>Categoria:</h2>
-                <select id="categoria"></select><br>
-                <button type="button" onclick="gerarCategoria()">Adicionar</button><br><br>
-              <div id="mostrarcategoria"></div>
-            </div>
-            </div>
-          </div>
-
-        <div class="centro"><br>
-            <div class="comida_bloco">
-            <h3>Comida:</h3>
-              <select id="comida"></select>
-              <input type="number" id="quantidadeComida" min="0" max="10" value="0">
-              <button type="button" onclick="adicionarComida()">Adicionar</button>
-              <br><br>
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
             </div>
 
-            <div class="bebida_bloco">
-            <h3>Bebida:</h3>
-              <select id="bebida"></select>
-              <input type="number" id="quantidadeBebida" min="0" max="10" value="0">
-              <button type="button" onclick="adicionarBebida()">Adicionar</button>
-              <br><br>
+            <div class="card">
+                <img src="img/imagem_produto.png" class="imagem_produto" alt="">
+                <p class="d_produto">descricao</p>
+                <p class="p_produto">R$ 00,00</p>
+                <p class="botao_produto"><a class="letra_botao" href="site.html">Saiba Mais</a></p>
             </div>
 
-            <div class="combo_bloco">
-            <h3>Combos:</h3>
-              <select id="combo"></select>
-              <input type="number" id="quantidadeCombo" min="0" max="10" value="0">
-              <button type="button" onclick="adicionarCombo()">Adicionar</button>
-              <br><br>
-            </div>
-          </div>
-          
-          <div class="assentos_bloco">
-            
-            <img class="assentos" src="img/assentos.png" alt="mapa"><br><br>
-              <div class="assento_numeros"><br>
-                <select id="letras"></select>
-                <select id="numeros"></select>
-                <button type="button" onclick="adicionarAssento()">Adicionar</button><br><br>
-              </div>
-          </div>
         </div>
-        <div class="carrinho"><br>
-          
-          <h3> Tipo Ingressos:</h3>
-          <div id="ingressoMostrar"></div><br>
-          <h3>Horários:</h3>
-          <div id="horarioMostrar"></div><br>
-          <h3>Categoria:</h3>
-          <div id="categoriaMostrar"></div><br>
-          <h3>Filme:</h3>
-          <div id="filmeMostrar"></div><br>
-          <h3>Comida:</h3>
-          <div id="comidaMostrar"></div><br>
-          <h3>Bebida:</h3>
-          <div id="bebidaMostrar"></div><br>
-          <h3>Combos:</h3>
-          <div id="comboMostrar"></div><br>
-          <h3>Assentos Selecionados:</h3>
-          <div id="assentoMostrar"></div><br>
-
-          <button type="button" onclick="total()">Total</button><br><br>
-          <div id="totalMostrar"></div>
-
-        </div><br>
-
-        <button onclick="window.print()">Gerar PDF do Relatório</button>
-        <br>
-    </div>
-  </main>
-  <footer>
-    <div class="esquerda"><br><br>
-      <img class="parana" src="img/parana.svg" alt="Parana">
-      <img class="escola" src="img/escola.png" alt="Escola">
-    </div>
-
-  </footer>
-  
-<script src="script.js"></script>
+    </main>
+    
+    <footer>
+        
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

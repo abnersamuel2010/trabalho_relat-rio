@@ -5,6 +5,7 @@
 
 /* html */
 body{
+    position: relative;
     display: grid;
     grid-template-areas:
         "cabeca cabeca"
@@ -83,55 +84,50 @@ footer{
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 50px;
     align-items: center;
     background-color: rgb(226, 226, 226);
-    width: 200px;
-    height: 450px;
-    border-radius: 50px;
+    width: 500px;
+    height: 350px;
     text-align: center;
+    justify-content: center;
     margin: 15px;
     border: rgb(46, 46, 46) 4px solid;
 }
 
+.inf_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(226, 226, 226);
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    margin: 15px;
+    border: rgb(46, 46, 46) 4px solid;
+
+}
+
+.texto_produto{
+    padding: 20px;
+    overflow-wrap: break-word;
+}
 
 .imagem_produto{
-    width: 250px;
+    width: 500px;
 }
 
-.d_produto{
-    color: rgb(22, 22, 22);
-    font-size: xx-large;
-
-}
-
-.p_produto{
-    color: rgb(22, 22, 22);
-    font-size: 40px;
-}
-
-.botao_produto{
-    font-size: 30px;
-    background-color: black;
-    width: 90%;
-    height: 45px;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.letra_botao{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: aliceblue;
-}
 /* card */
-
-
 .mae{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+}
+.centro{
+    text-align: center;
 }
 
+.esquerda{
+    text-align: left;
+}
+.direita{
+    text-align: right;
+}
